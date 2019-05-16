@@ -19,4 +19,8 @@ public class mainmenu : MonoBehaviour {
 		Debug.Log("I love you, platonically don't get any wrong ideas");
 		Application.Quit();
 	}
+	public void Sound ()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+	}
 }

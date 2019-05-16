@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 92c50db960aad7349aefd53941e1c958
+  - enabled: 1
+    path: Assets/Scenes/DummyScene.unity
+    guid: e4de7ef8353da584f8e8062f281ca2b6
+  - enabled: 1
+    path: Assets/Scenes/Sound-Test.unity
+    guid: 34a1d2d1bc8a0554290148eae4a99876
   m_configObjects: {}

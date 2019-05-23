@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4748536536730261198}
   - component: {fileID: 5255698908614631698}
   - component: {fileID: 5652851703690148490}
+  - component: {fileID: 2888355068715708307}
   m_Layer: 0
   m_Name: Caroline
   m_TagString: Hero
@@ -99,3 +100,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2888355068715708307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757046353064936941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 040817b10e6d9994f830dcb231017ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Caroline
+  stats: {fileID: 5136031668272980592, guid: 3f5e305a908af6143897fa67d5640d58, type: 3}

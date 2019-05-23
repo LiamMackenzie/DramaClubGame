@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7223457790987104038}
   - component: {fileID: 5036082924954394226}
   - component: {fileID: 8824919599720136872}
+  - component: {fileID: 8189105087018104872}
   m_Layer: 0
-  m_Name: idle1
+  m_Name: GrrGrr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,3 +100,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8189105087018104872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333332035340536504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09f3be8c2fa0341ba23be8cf87a254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero:
+    name: 
+    baseHP: 0
+    currentHP: 0
+    baseMP: 0
+    currentMP: 0
+    Strength: 0
+    Vitality: 0
+    Defences: 0
+    Dexterity: 0
+    Intelligence: 0
+    Charisma: 0
+    Wisdom: 0
+    Ego: 0
+    Perception: 0
+    Luck: 0
+  CurrentState: 0

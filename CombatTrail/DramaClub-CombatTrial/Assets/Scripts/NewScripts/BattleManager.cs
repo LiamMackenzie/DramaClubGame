@@ -33,6 +33,21 @@ public class BattleManager : MonoBehaviour
         allies = alliesObject.GetComponentsInChildren<BattleCharacter>();
         enemies = enemiesObject.GetComponentsInChildren<BattleCharacter>();
 
+        int count = 0;
+        foreach (BattleCharacter bc in allies)
+        {
+            count++;
+            bc.SetManager(this);
+            bc.YourIndexIs(count);
+        }
+        count = 0;
+        foreach (BattleCharacter bc in enemies)
+        {
+            count++;
+            bc.SetManager(this);
+            bc.YourIndexIs(count);
+        }
+
         _actionsThisRound = new List<BattleAction>();
         Debug.Log("There are " + characters.Length + " characters");   
         state = BattleState.ROUND_START; 
@@ -99,7 +114,7 @@ public class BattleManager : MonoBehaviour
         //and move to the next character
         if (state == BattleState.CHOOSE_WAITING && newstate == BattleState.CHOOSE_ACTIONS)
         {
-            characters[_currentCharacterIndex].SetTurn(this, false); //not their turn any more.
+            characters[_currentCharacterIndex].SetTurn(false); //not their turn any more.
             _currentCharacterIndex+= 1;
         }
 
@@ -126,7 +141,7 @@ public class BattleManager : MonoBehaviour
         if (_currentCharacterIndex < characters.Length)
         {
             //tell the current character it is their turn to choose
-            characters[_currentCharacterIndex].SetTurn(this, true);
+            characters[_currentCharacterIndex].SetTurn(true);
             //now wait until they choose
             SwitchStateTo(BattleState.CHOOSE_WAITING);
         }
@@ -136,6 +151,38 @@ public class BattleManager : MonoBehaviour
             SwitchStateTo(BattleState.RUN_ACTIONS);
         }
         
+    }
+
+    public void ChooseTargetMode(bool shouldShow, BattleActionTargetingType mode=BattleActionTargetingType.SINGLE_ALLY_TARGET)
+    {
+        if (shouldShow)
+        {
+            if (mode == BattleActionTargetingType.SINGLE_ALLY_TARGET)
+            {
+                foreach (BattleCharacter bc in allies)
+                {
+                    bc.ShowCharacterMenu(true);
+                }
+            }
+            else if (mode == BattleActionTargetingType.SINGLE_ENEMY_TARGET)
+            {
+                foreach (BattleCharacter bc in enemies)
+                {
+                    bc.ShowCharacterMenu(true);
+                }
+            }
+        }
+        else
+        {
+            foreach (BattleCharacter bc in allies)
+            {
+                bc.ShowCharacterMenu(false);
+            }
+            foreach (BattleCharacter bc in enemies)
+            {
+                bc.ShowCharacterMenu(false);
+            }
+        }
     }
 
     public void DoRunActions()
@@ -167,5 +214,16 @@ public class BattleManager : MonoBehaviour
     {
         _actionsThisRound.Sort(BattleAction.CompareActions);
         //now, the list should be sorted by speed.
+    }
+
+    //Only for mouse choose
+    public void OnMouseChooseCurrentCharacterAction(int actionSelection)
+    {
+        characters[_currentCharacterIndex].ChooseAction(actionSelection);
+    }
+
+    public void OnMouseChooseCurrentCharactersTarget(int targetnum)
+    {
+        characters[_currentCharacterIndex].ChooseTarget(targetnum);
     }
 }

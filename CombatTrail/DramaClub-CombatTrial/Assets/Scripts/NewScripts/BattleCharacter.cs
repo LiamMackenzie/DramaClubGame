@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleCharacter : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class BattleCharacter : MonoBehaviour
     private BattleManager _manager;
     private BattleCharacter[] _potentialTargets;
     public Stats stats;
-   
+    public Button targetButton;
+    public Text targetText;
+    public GameObject characterMenuRoot;
+    private int _targetIndex; //what 'choice number' the battlemanager thinks I am.
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,12 @@ public class BattleCharacter : MonoBehaviour
         BattleAction[] actionlist = GetComponentsInChildren<BattleAction>();
         _actions = new List<BattleAction>(actionlist); //put them in the list.
         _isMyTurn = false;
+
+        if (targetText != null)
+        {
+            targetText.text = characterName;
+        }
+        ShowCharacterMenu(false);
     }
 
     // Update is called once per frame
@@ -31,11 +41,10 @@ public class BattleCharacter : MonoBehaviour
         }
     }
 
-    public void SetTurn(BattleManager m, bool turn)
+    public void SetTurn( bool turn)
     {
         stats.CHealth = stats.MaxHealth;
         stats.CMana = stats.MaxMana;
-        _manager = m;
         _isMyTurn = turn;
         _actionSelection = -1;
         _choosingTarget = false;
@@ -103,8 +112,23 @@ public class BattleCharacter : MonoBehaviour
         }
     }
 
-    void ChooseAction()
+    public void SetManager(BattleManager m)
     {
+        _manager = m;
+    }
+
+    public void ShowCharacterMenu(bool shouldShow)
+    {
+        if (characterMenuRoot != null)
+        {
+            characterMenuRoot.SetActive(shouldShow);
+        }
+    }
+
+   public void ChooseAction(int actionSelection=-1)
+    {
+        _actionSelection = actionSelection;
+        
         //choose an action (actionselection is an INDEX!)
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
@@ -137,6 +161,7 @@ public class BattleCharacter : MonoBehaviour
                 batt != BattleActionTargetingType.ENEMY_PARTY &&
                 batt != BattleActionTargetingType.ALLY_PARTY )
             {
+                _manager.ChooseTargetMode(true, batt);
                 //we need to choose a target
                 _choosingTarget = true;
                 PrintAvailableTargets();
@@ -153,10 +178,9 @@ public class BattleCharacter : MonoBehaviour
         }
     }
 
-    void ChooseTarget()
+    public void ChooseTarget(int choice=0)
     {
         //choose a target
-        int choice = 0;
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             choice = 1;
@@ -174,12 +198,14 @@ public class BattleCharacter : MonoBehaviour
             choice = 4;
         }
 
-        if (choice != 0)
+        if (choice != 0) //0 means no choice
         {
+            Debug.Log("The Choice was: " + choice);
             if (choice <= _potentialTargets.Length)
             {
                 _actions[_actionSelection].target = _potentialTargets[choice-1];
                 QueueAction();
+                _manager.ChooseTargetMode(false);
             }
             else
             {
@@ -195,6 +221,16 @@ public class BattleCharacter : MonoBehaviour
         theAction.source = this;
         _manager.AddAction(theAction);
         
+    }
+
+    public void YourIndexIs(int index)
+    {
+        _targetIndex = index;
+    }
+
+    public void OnClickedAsTarget()
+    {
+        _manager.OnMouseChooseCurrentCharactersTarget(_targetIndex);
     }
     
 }

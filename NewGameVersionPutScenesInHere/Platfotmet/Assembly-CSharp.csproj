@@ -66,10 +66,11 @@
     <Compile Include="Assets\Scripts\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Ground.cs" />
-    <Compile Include="Assets\Scripts\ItemPickUp.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\pauseTime.cs" />
     <Compile Include="Assets\Scripts\Pausing.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\startTime.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Documents(Better)/DramaClubGame/NewGameVersionPutScenesInHere/Platfotmet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

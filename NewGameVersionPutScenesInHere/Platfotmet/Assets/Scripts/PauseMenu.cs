@@ -41,25 +41,5 @@ public GameObject pauseMenuUI;
 		GamePause = true;
 	}
 	
-	public void LoadMenu()
-	{
-		Debug.Log("Loading Menu...");
-		SceneManager.LoadScene("Menu");
-	}
-
-	public void QuitGame()
-	{
-		Debug.Log("Quitting Game...");
-		Application.Quit();
-	}
-
-	public void controls()
-	{
-		Debug.Log("Loading Controlss... Because someone didn't read them earlier and are now complaining");
-	}
-
-	public void LoadGame()
-	{
-		Debug.Log("Loading Load Screen...");
-	}
+	
 }

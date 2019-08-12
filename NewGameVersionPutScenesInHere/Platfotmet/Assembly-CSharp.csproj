@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\pauseTime.cs" />
     <Compile Include="Assets\Scripts\Pausing.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerAnimations\AmandaAnimationCode\AmandaAni.cs" />
     <Compile Include="Assets\Scripts\startTime.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\WayPoint.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\ZombiesOrCharacterFollow.cs" />

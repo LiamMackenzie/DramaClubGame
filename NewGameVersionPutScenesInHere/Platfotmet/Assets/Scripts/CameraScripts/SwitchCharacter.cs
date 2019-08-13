@@ -36,7 +36,11 @@ public class SwitchCharacter : MonoBehaviour
         character1.SetActive(true);
         camera1.SetActive(true);
         camera3.SetActive(false);
+
+        character1.transform.position = characterInPlay.transform.position;
         characterInPlay.SetActive(false);
+
+
 
     }
 
@@ -45,6 +49,8 @@ public class SwitchCharacter : MonoBehaviour
           character2.SetActive(true);
         camera2.SetActive(true);
         camera3.SetActive(false);
+
+        character2.transform.position = characterInPlay.transform.position;
         characterInPlay.SetActive(false);
     }
 }

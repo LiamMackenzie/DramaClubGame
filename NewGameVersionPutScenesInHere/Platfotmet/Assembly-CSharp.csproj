@@ -60,26 +60,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyAnimations\GrrGrr.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\CameraFollowMe.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\SwitchCharacter.cs" />
+    <Compile Include="Assets\Scripts\Collectables\Orbs.cs" />
     <Compile Include="Assets\Scripts\DC_HealthSystem\GameHandler.cs" />
     <Compile Include="Assets\Scripts\DC_HealthSystem\HealthBar.cs" />
     <Compile Include="Assets\Scripts\DC_HealthSystem\HealthSytem.cs" />
     <Compile Include="Assets\Scripts\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyAnimations\GrrGrr.cs" />
     <Compile Include="Assets\Scripts\Ground.cs" />
+    <Compile Include="Assets\Scripts\HubWorld\PlayerAnimationHub.cs" />
     <Compile Include="Assets\Scripts\HubWorld\PlayerMovementTopDown.cs" />
+    <Compile Include="Assets\Scripts\HubWorld\TestLevelLoad\levelLoader.cs" />
+    <Compile Include="Assets\Scripts\MenuControl\startButton.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\pauseTime.cs" />
     <Compile Include="Assets\Scripts\Pausing.cs" />
+    <Compile Include="Assets\Scripts\Pitfalls\pitFallRespawn.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations\AmandaAnimationCode\AmandaAni.cs" />
     <Compile Include="Assets\Scripts\startTime.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\WayPoint.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\ZombiesOrCharacterFollow.cs" />
+    <Compile Include="Assets\Scripts\timers\timingMechanism.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -315,6 +321,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>D:/Documents(Better)/DramaClubGame/NewGameVersionPutScenesInHere/Platfotmet/Assets/Packages/AstarPathfindingProject - Copy/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>D:/Documents(Better)/DramaClubGame/NewGameVersionPutScenesInHere/Platfotmet/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -323,9 +332,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/Documents(Better)/DramaClubGame/NewGameVersionPutScenesInHere/Platfotmet/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>D:/Documents(Better)/DramaClubGame/NewGameVersionPutScenesInHere/Platfotmet/Assets/Packages/AstarPathfindingProject - Copy/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

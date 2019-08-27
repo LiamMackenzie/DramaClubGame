@@ -34,5 +34,16 @@ public class AmandaAni : MonoBehaviour
             animator.Play ("Base Layer.Amanda");
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.Play ("Base Layer.AmandaJump");
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animator.Play ("Amanda Run");
+        }
+
     }
 }

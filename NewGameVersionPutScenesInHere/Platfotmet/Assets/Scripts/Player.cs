@@ -18,13 +18,10 @@ public class Player : MonoBehaviour {
 	private int moreJump;
 	public int moreJumpVal;
 
-	
-
 	// Use this for initialization
 	void Start () {
 		moreJump = moreJumpVal;
 		rb = GetComponent<Rigidbody2D>();
-		
 	}
 	
 	// Update is called once per frame

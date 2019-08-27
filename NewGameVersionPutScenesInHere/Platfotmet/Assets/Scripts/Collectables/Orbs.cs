@@ -22,9 +22,11 @@ public class Orbs : MonoBehaviour
 
       void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.tag == "Collectable")
+        {
         scoreNum += scoreAdd;
         text.text = "Score:" + scoreNum;
        Destroy(other.gameObject);
-
+        }
     }
 }

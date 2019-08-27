@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Loader
   - pitFall
+  - enemy
+  - Collectable
   layers:
   - Default
   - TransparentFX

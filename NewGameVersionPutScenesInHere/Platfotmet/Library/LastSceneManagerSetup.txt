@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Forest Stages/ForestLevel.unity
-  isLoaded: 1
-  isActive: 1

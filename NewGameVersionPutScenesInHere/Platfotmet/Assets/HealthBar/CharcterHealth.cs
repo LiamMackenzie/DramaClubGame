@@ -14,7 +14,6 @@ public class CharcterHealth : MonoBehaviour
     {
         maxHealth = 20f;
         currentHealth = maxHealth;
-
         healthBar.value = CalculateHealth();
         
     }

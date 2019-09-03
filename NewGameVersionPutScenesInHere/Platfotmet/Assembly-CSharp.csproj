@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\CameraFollowMe.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\SwitchCharacter.cs" />
-    <Compile Include="Assets\Scripts\Collectables\Orbs.cs" />
+    <Compile Include="Assets\Scripts\Collectables\CollectablesUpdate\Orbs.cs" />
     <Compile Include="Assets\Scripts\DC_HealthSystem\GameHandler.cs" />
     <Compile Include="Assets\Scripts\DC_HealthSystem\HealthBar.cs" />
     <Compile Include="Assets\Scripts\DC_HealthSystem\HealthSytem.cs" />
@@ -83,9 +83,11 @@
     <Compile Include="Assets\Scripts\Pitfalls\pitFallRespawn.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations\AmandaAnimationCode\AmandaAni.cs" />
+    <Compile Include="Assets\Scripts\PlayerAnimations\CarolineAnimations\CarAni.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerSounds\jumpSound.cs" />
     <Compile Include="Assets\Scripts\startTime.cs" />
+    <Compile Include="Assets\Scripts\Testing Scripts\LevelEnd.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\WayPoint.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\ZombiesOrCharacterFollow.cs" />
     <Compile Include="Assets\Scripts\timers\timingMechanism.cs" />

@@ -9,13 +9,17 @@ public class CharcterHealth : MonoBehaviour
     public float currentHealth;
 
     public Slider healthBar;
+
+  
+
+    
     
     void Start()
     {
         maxHealth = 20f;
         currentHealth = maxHealth;
         healthBar.value = CalculateHealth();
-        
+        Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
     }
 
    
@@ -25,12 +29,20 @@ public class CharcterHealth : MonoBehaviour
         {
             DealDamge(6);
         }
-        
     }
 
     float CalculateHealth()
     {
         return currentHealth/maxHealth;
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Enemy")
+        {
+            DealDamge(6);
+            healthBar.value = CalculateHealth();
+        }
     }
 
     void DealDamge(float damageValue)
@@ -48,4 +60,6 @@ public class CharcterHealth : MonoBehaviour
         currentHealth = 0;
         Debug.Log("You died");
     }
+
+    
 }

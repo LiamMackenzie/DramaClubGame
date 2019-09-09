@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
 	private float movement;
 	
 	private bool faceright = true;
-	private Rigidbody2D rb;
+	private Rigidbody2D rb2d;
 	
 	private bool onground;
 	public Transform floorCheck;
@@ -18,18 +18,42 @@ public class Player : MonoBehaviour {
 	private int moreJump;
 	public int moreJumpVal;
 
+	//KnockBack
+	public float knockBack;
+	public float knockBacklength;
+	public float knockBackcount;
+	public bool  knockFromright;
+
+
+
 	// Use this for initialization
 	void Start () {
 		moreJump = moreJumpVal;
-		rb = GetComponent<Rigidbody2D>();
+		rb2d = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate () 
+	{
 		onground = Physics2D.OverlapCircle(floorCheck.position, checkRadius, whatGround);
 
-		movement = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(movement * speed, rb.velocity.y);
+		movement = Input.GetAxisRaw("Horizontal");
+		if(knockBackcount <= 0)
+		{
+			rb2d.velocity = new Vector2(movement * speed, rb2d.velocity.y);
+		}
+		else
+		{
+			if(knockFromright)
+			{
+				rb2d.velocity = new Vector2 (-knockBack, knockBack);
+			}
+			if(!knockFromright)
+			{
+				rb2d.velocity = new Vector2 (knockBack, knockBack);
+				knockBackcount -= Time.deltaTime;
+			}
+		}
 	
 	}
 	void Update()
@@ -68,12 +92,12 @@ public class Player : MonoBehaviour {
 
 		if(Input.GetKeyDown(KeyCode.Space) && moreJump > 0)
 		{
-			rb.velocity = Vector2.up * jumpHeight;
+			rb2d.velocity = Vector2.up * jumpHeight;
 			moreJump--;
 		}
 		else if(Input.GetKeyDown(KeyCode.Space) && moreJump == 0 && onground == true)
 		{
-			rb.velocity = Vector2.up * jumpHeight;
+			rb2d.velocity = Vector2.up * jumpHeight;
 		}
 		
 	

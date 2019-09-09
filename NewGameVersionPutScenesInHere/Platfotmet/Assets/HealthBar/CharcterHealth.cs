@@ -20,6 +20,8 @@ public class CharcterHealth : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.value = CalculateHealth();
         Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
+        
+        
     }
 
    
@@ -58,7 +60,7 @@ public class CharcterHealth : MonoBehaviour
     void Die()
     {
         currentHealth = 0;
-        Debug.Log("You died");
+        //Debug.Log("You died");
     }
 
     

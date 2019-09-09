@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class Player : MonoBehaviour {
 	public float speed;
 	public float jumpHeight;
 	private float movement;
@@ -51,8 +51,9 @@ public class PlayerController : MonoBehaviour {
 			if(!knockFromright)
 			{
 				rb2d.velocity = new Vector2 (knockBack, knockBack);
-				knockBackcount -= Time.deltaTime;
+				
 			}
+			knockBackcount -= Time.deltaTime;
 		}
 	
 	}
@@ -103,8 +104,20 @@ public class PlayerController : MonoBehaviour {
 	
 		
 	}
-	
 
-	
-	
+	void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Enemy")
+        {
+            rb2d.AddForce(new Vector2(knockBack, knockBack) * 2);
+			if(col.transform.position.x < transform.position.x)
+			{
+				knockFromright = true;
+			}
+			else
+			{
+				knockFromright = false;
+			}	
+        }
+    }
 }

@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 1422470387190692758}
   - component: {fileID: 1422470387190692759}
   - component: {fileID: 1422470387190692755}
-  - component: {fileID: 1422470387190692744}
+  - component: {fileID: 1984450091115069611}
   - component: {fileID: 1422470387190692757}
   - component: {fileID: 1422470387190692752}
   - component: {fileID: 1422470387190692745}
@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1422470387190692758
 Transform:
   m_ObjectHideFlags: 0
@@ -132,7 +132,9 @@ MonoBehaviour:
   shootPosition: {fileID: 3998188995246181101}
   bulletPre: {fileID: 4811811996252226252, guid: 33a775ba906914c4da5490ddeade3755,
     type: 3}
---- !u!114 &1422470387190692744
+  cooldown: 0
+  cooldownReset: 0
+--- !u!114 &1984450091115069611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,17 +143,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1422470387190692754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8e03b6f98e06c4dbb14d6457e4886b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f5bbfa0aeacd234d935a6685bed921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpHeight: 40
+  speed: 0
+  jumpHeight: 0
   floorCheck: {fileID: 1422470387645104367}
-  checkRadius: 1
+  checkRadius: 0
   whatGround:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   moreJumpVal: 0
+  knockBack: 0
+  knockBacklength: 0
+  knockBackcount: 0
+  knockFromright: 0
 --- !u!50 &1422470387190692757
 Rigidbody2D:
   serializedVersion: 4

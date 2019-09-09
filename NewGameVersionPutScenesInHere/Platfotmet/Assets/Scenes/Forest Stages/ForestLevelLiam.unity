@@ -1151,7 +1151,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2923888238897567124}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2410,7 +2410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 762987745}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Players
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6742,7 +6742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2923888238897567124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.414, z: 0}
+  m_LocalPosition: {x: 0, y: -0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2923888239212708050}
@@ -6780,12 +6780,12 @@ GameObject:
   - component: {fileID: 2923888239212708048}
   - component: {fileID: 2923888239212708055}
   - component: {fileID: 2923888239212708056}
-  - component: {fileID: 2923888239212708054}
   - component: {fileID: 2923888239212708052}
   - component: {fileID: 2923888239212708053}
   - component: {fileID: 2923888239212708057}
   - component: {fileID: 2923888239212708058}
   - component: {fileID: 2923888239212708059}
+  - component: {fileID: 2923888239212708054}
   m_Layer: 11
   m_Name: Amanda
   m_TagString: Untagged
@@ -6801,7 +6801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2923888239212708049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8, y: -8.41, z: 0.3022485}
+  m_LocalPosition: {x: 5.71, y: -10.09, z: 0.3022485}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 2923888238897567127}
@@ -6894,21 +6894,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2923888239212708049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8e03b6f98e06c4dbb14d6457e4886b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f5bbfa0aeacd234d935a6685bed921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpHeight: 18
-  floorCheck: {fileID: 1274372174}
-  checkRadius: 1
+  jumpHeight: 15
+  floorCheck: {fileID: 2923888238897567127}
+  checkRadius: 0
   whatGround:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1847
   moreJumpVal: 0
-  knockBack: 10
+  knockBack: 500
   knockBacklength: 0.2
   knockBackcount: 0
-  knockFromright: 0
+  knockFromright: 1
 --- !u!50 &2923888239212708055
 Rigidbody2D:
   serializedVersion: 4
@@ -7113,12 +7113,12 @@ PrefabInstance:
     - target: {fileID: 8656624290556369275, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 9.41
       objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369275, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.39
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369275, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
@@ -7194,6 +7194,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250540032580759250, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 570540657685761900, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8656624290556369278, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}

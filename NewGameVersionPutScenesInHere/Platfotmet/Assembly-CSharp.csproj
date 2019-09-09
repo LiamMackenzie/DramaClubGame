@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\Pitfalls\pitFallRespawn.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimations\AmandaAnimationCode\AmandaAni.cs" />
+     <Compile Include="Assets\Scripts\Playercontroller.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerSounds\jumpSound.cs" />
      <Compile Include="Assets\Scripts\startTime.cs" />

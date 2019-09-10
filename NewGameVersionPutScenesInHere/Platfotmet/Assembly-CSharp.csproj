@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\HubWorld\PlayerAnimationHub.cs" />
     <Compile Include="Assets\Scripts\HubWorld\PlayerMovementTopDown.cs" />
     <Compile Include="Assets\Scripts\HubWorld\TestLevelLoad\levelLoader.cs" />
+    <Compile Include="Assets\Scripts\JasonScripts\OrbsNew.cs" />
     <Compile Include="Assets\Scripts\MenuControl\startButton.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />

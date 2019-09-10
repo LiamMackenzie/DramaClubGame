@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class startButton : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class startButton : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return))
         {
+            SceneManager.LoadScene("MainHub");
              PressStart.SetActive(false);
              MainMenu.SetActive(true);
 

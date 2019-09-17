@@ -21,9 +21,11 @@ public GameObject shot;
 			if (enemy != null)
 				{
 					enemy.DamageDealt(damage);
+					Destroy(gameObject);
+					Instantiate(shot, transform.position, Quaternion.identity);
 				}
-			Destroy(gameObject);
-			Instantiate(shot, transform.position, Quaternion.identity);
+			
+			
 			
 		}
 		

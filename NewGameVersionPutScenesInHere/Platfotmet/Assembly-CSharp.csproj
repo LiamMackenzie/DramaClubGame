@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerSounds\jumpSound.cs" />
     <Compile Include="Assets\Scripts\startTime.cs" />
+    <Compile Include="Assets\Scripts\Testing Scripts\BattleArenaScripts\CameraZoomOutTest.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\WayPoint.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\ZombiesOrCharacterFollow.cs" />
     <Compile Include="Assets\Scripts\timers\timingMechanism.cs" />

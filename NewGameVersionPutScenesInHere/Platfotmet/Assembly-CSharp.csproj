@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyAnimations\GrrGrr.cs" />
     <Compile Include="Assets\HealthBar\CharcterHealth.cs" />
     <Compile Include="Assets\Scripts\AttackScripts\AndreAttack.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -75,6 +74,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\Ground.cs" />
+    <Compile Include="Assets\Scripts\GrrGrr.cs" />
     <Compile Include="Assets\Scripts\HubWorld\PlayerAnimationHub.cs" />
     <Compile Include="Assets\Scripts\HubWorld\PlayerMovementTopDown.cs" />
     <Compile Include="Assets\Scripts\HubWorld\TestLevelLoad\levelLoader.cs" />
@@ -86,12 +86,13 @@
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\pauseTime.cs" />
     <Compile Include="Assets\Scripts\Pausing.cs" />
+    <Compile Include="Assets\Scripts\PControl.cs" />
     <Compile Include="Assets\Scripts\Pitfalls\pitFallRespawn.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations\AmandaAnimationCode\AmandaAni.cs" />
-    <Compile Include="Assets\Scripts\Playercontroller.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerSounds\jumpSound.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\startTime.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\BattleArenaScripts\CameraZoomOutTest.cs" />
     <Compile Include="Assets\Scripts\Testing Scripts\WayPoint.cs" />

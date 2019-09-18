@@ -18,7 +18,7 @@ public class startButton : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("MainHub");
+            
              PressStart.SetActive(false);
              MainMenu.SetActive(true);
 

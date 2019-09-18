@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\HubWorld\TestLevelLoad\levelLoader.cs" />
     <Compile Include="Assets\Scripts\JasonScripts\OrbsNew.cs" />
     <Compile Include="Assets\Scripts\LevelEnd\ForrestStageLevelEnd.cs" />
+    <Compile Include="Assets\Scripts\MenuControl\menuSelectionScreen.cs" />
     <Compile Include="Assets\Scripts\MenuControl\startButton.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuScripts.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Elevator.cs" />

@@ -8,6 +8,9 @@ TagManager:
   - pitFall
   - Collectable
   - Enemy
+  - player
+  - Amanda
+  - Ground
   layers:
   - Default
   - TransparentFX

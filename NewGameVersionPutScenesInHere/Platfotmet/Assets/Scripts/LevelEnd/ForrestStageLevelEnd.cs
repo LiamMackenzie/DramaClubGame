@@ -21,7 +21,7 @@ public class ForrestStageLevelEnd : MonoBehaviour
     {
         if (collision.gameObject.tag == "Loader")
         {
-            SceneManager.LoadScene("MainHub");
+            SceneManager.LoadScene("BossGrrJason");
         }
     }
 }

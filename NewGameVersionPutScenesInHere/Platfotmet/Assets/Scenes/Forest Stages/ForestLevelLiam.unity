@@ -6905,7 +6905,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1847
   moreJumpVal: 0
-  knockBack: 500
+  knockBack: 200
   knockBacklength: 0.2
   knockBackcount: 0
   knockFromright: 1

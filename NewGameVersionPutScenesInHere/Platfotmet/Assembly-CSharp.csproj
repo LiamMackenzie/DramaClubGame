@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\Ground.cs" />
+    <Compile Include="Assets\Scripts\HubWorld\Dialogue\NextDialogue.cs" />
     <Compile Include="Assets\Scripts\HubWorld\PlayerAnimationHub.cs" />
     <Compile Include="Assets\Scripts\HubWorld\PlayerMovementTopDown.cs" />
     <Compile Include="Assets\Scripts\HubWorld\TestLevelLoad\levelLoader.cs" />

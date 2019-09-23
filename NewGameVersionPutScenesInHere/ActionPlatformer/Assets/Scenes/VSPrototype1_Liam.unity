@@ -5337,6 +5337,11 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 1974464180}
+    - target: {fileID: 4130926588144092095, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: startTimeBetweenAttack
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1346442388264758803, guid: b203ca05434f81642b837a57b38e1f40, type: 3}
     - {fileID: 2233204983691310576, guid: b203ca05434f81642b837a57b38e1f40, type: 3}
@@ -9748,9 +9753,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  health: 10
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
+  knockBack: 10000
+  knockBacklength: 1.5
+  knockBackcount: 0
 --- !u!50 &2115503239
 Rigidbody2D:
   serializedVersion: 4

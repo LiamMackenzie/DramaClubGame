@@ -42,7 +42,7 @@ public class PControl : MonoBehaviour {
 	
 
 	
-	void Start () {
+	void Start() {
 		moreJump = moreJumpVal;
 		rb = GetComponent<Rigidbody2D>();
 
@@ -50,6 +50,8 @@ public class PControl : MonoBehaviour {
 
 		currentHealth = maxHealth;
         healthBar.value = CalculateHealth();
+
+		
 	}
 	
 	
@@ -86,20 +88,21 @@ public class PControl : MonoBehaviour {
 	{
 		if(onground == true)
 		{
-			moreJump = moreJumpVal;
+			moreJump = moreJumpVal;	
+			
 			animator.SetBool("isJumping", false);
-
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space) && moreJump > 0)
-		{
+		{	
 			rb.velocity = Vector2.up * jumpHeight;
-			animator.SetBool("isJumping", true);
 			moreJump--;
+			
 		}
 		else if(Input.GetKeyDown(KeyCode.Space) && moreJump == 0 && onground == true)
 		{
 			rb.velocity = Vector2.up * jumpHeight;
+			animator.SetBool("isJumping", true);
 		}
 		
 	}

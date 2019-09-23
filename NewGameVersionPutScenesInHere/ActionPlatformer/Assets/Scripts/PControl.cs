@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PControl : MonoBehaviour {
+
+	public Animator animator;
+
 	public float speed;
 	public float jumpHeight;
 	private float movement;
@@ -46,6 +49,8 @@ public class PControl : MonoBehaviour {
 
 		movement = Input.GetAxis("Horizontal");
 		rb.velocity = new Vector2(movement * speed, rb.velocity.y);
+
+		animator.SetFloat("Speed", Mathf.Abs(movement));
 
 		if(knockBackcount <= 0)
 		{
@@ -98,11 +103,14 @@ public class PControl : MonoBehaviour {
 		if(onground == true)
 		{
 			moreJump = moreJumpVal;
+			animator.SetBool("isJumping", false);
+
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space) && moreJump > 0)
 		{
 			rb.velocity = Vector2.up * jumpHeight;
+			animator.SetBool("isJumping", true);
 			moreJump--;
 		}
 		else if(Input.GetKeyDown(KeyCode.Space) && moreJump == 0 && onground == true)

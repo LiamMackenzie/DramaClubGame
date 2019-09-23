@@ -21,7 +21,12 @@ public class levelLoader : MonoBehaviour
     {
         if (collision.gameObject.tag == "Loader")
         {
-            SceneManager.LoadScene("JASONSFORRESTSCENE");
+            SceneManager.LoadScene("VSPrototype1_Jason");
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("VSPrototype1_Jason");
     }
 }

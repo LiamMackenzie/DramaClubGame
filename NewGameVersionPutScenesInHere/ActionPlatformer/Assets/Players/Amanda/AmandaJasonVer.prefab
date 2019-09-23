@@ -343,6 +343,7 @@ MonoBehaviour:
   animator: {fileID: 6802772997996098576}
   speed: 10
   jumpHeight: 25
+  spriteRenderer: {fileID: 7160783624333715894}
   floorCheck: {fileID: 5472869811722953074}
   checkRadius: 1
   whatGround:

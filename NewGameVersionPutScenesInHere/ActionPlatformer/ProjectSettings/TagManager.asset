@@ -11,6 +11,10 @@ TagManager:
   - player
   - Amanda
   - Ground
+  - WallLeft
+  - WallRight
+  - GrrJump
+  - GrrJumpBig
   layers:
   - Default
   - TransparentFX

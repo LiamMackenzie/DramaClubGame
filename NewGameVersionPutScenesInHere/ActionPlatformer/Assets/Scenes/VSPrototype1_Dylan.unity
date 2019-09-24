@@ -4631,12 +4631,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &821893079 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6185883244503247290, guid: 03c56356d5a318d468bda4be3aa0f83a,
-    type: 3}
-  m_PrefabInstance: {fileID: 631242245}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &830169166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7761,12 +7755,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 227754043}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1593822690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6185883243891968014, guid: 03c56356d5a318d468bda4be3aa0f83a,
-    type: 3}
-  m_PrefabInstance: {fileID: 631242245}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1595729639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10208,7 +10196,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1593822690}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2136250860
@@ -11186,7 +11174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a5109fab64e3041a9fac0f9cd4b135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 821893079}
+  pauseMenuUI: {fileID: 0}
 --- !u!4 &4196293735451005915
 Transform:
   m_ObjectHideFlags: 0

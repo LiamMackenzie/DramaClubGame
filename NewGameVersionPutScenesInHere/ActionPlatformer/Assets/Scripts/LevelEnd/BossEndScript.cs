@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ForrestStageLevelEnd : MonoBehaviour
+public class BossEndScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,12 +16,12 @@ public class ForrestStageLevelEnd : MonoBehaviour
     {
         
     }
-
+    
       void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Loader")
         {
-            SceneManager.LoadScene("BossGrrJasonTesting");
+            SceneManager.LoadScene("MainHub");
         }
     }
 }

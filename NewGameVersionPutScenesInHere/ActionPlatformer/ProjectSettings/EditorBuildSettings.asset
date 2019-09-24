@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VSPrototype1_Liam.unity
     guid: f35f6a2bcf8929340ab5010095f0f8e5
+  - enabled: 1
+    path: Assets/Scenes/Boss Stages/BossGrrJasonTesting.unity
+    guid: 4db0543d1e4b30e43a4e7b450e4091cc
   m_configObjects: {}

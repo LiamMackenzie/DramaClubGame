@@ -21,12 +21,12 @@ public class levelLoader : MonoBehaviour
     {
         if (collision.gameObject.tag == "Loader")
         {
-            SceneManager.LoadScene("VSPrototype1_Jason");
+            SceneManager.LoadScene("VSPrototype1_Liam");
         }
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene("VSPrototype1_Jason");
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

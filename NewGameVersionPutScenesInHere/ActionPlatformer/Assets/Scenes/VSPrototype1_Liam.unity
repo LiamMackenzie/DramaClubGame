@@ -5391,6 +5391,16 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1629807120}
+    - target: {fileID: 2233204983691310591, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233204983691310591, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4196293735216824673, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
       propertyPath: pauseMenuUI

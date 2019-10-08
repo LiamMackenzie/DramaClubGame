@@ -5351,12 +5351,12 @@ PrefabInstance:
     - target: {fileID: 1346442388264758808, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2233204983691310585, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1346442388264758815, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
@@ -5411,7 +5411,7 @@ PrefabInstance:
     - target: {fileID: 2233204983691310591, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
       propertyPath: jumpHeight
-      value: 35
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2233204983691310591, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
@@ -5443,6 +5443,11 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 1974464180}
+    - target: {fileID: 2233204983691310586, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1346442388264758810, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -5452,6 +5457,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346442388264758805, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1346442388264758803, guid: b203ca05434f81642b837a57b38e1f40, type: 3}

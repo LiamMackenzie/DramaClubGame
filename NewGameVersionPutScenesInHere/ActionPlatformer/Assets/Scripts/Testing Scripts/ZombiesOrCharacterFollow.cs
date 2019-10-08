@@ -11,7 +11,7 @@ public class ZombiesOrCharacterFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wP = GameObject.Find("WayPoint");
+        wP = GameObject.Find("AmandaJasonVer");
     }
 
     // Update is called once per frame

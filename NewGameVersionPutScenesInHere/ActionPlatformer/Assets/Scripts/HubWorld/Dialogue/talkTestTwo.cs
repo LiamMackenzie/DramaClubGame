@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Talktest : MonoBehaviour
+public class talkTestTwo : MonoBehaviour
 {
     public static bool Dialogue = false;
 
@@ -33,7 +33,7 @@ public class Talktest : MonoBehaviour
 
      void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Amanda")
+        if (collision.gameObject.tag == "GrrGrr")
         {
             Debug.Log("YEET");
          
@@ -50,7 +50,7 @@ public class Talktest : MonoBehaviour
 
     void OnCollisionExit2D (Collision2D collision)
     {
-        if(collision.gameObject.tag == "Amanda")
+        if(collision.gameObject.tag == "GrrGrr")
         {
             if(Dialogue == true)
             {
@@ -63,5 +63,3 @@ public class Talktest : MonoBehaviour
     
     }
 	
-	
-

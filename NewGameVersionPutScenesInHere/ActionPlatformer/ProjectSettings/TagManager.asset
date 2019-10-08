@@ -15,6 +15,7 @@ TagManager:
   - WallRight
   - GrrJump
   - GrrJumpBig
+  - GrrGrr
   layers:
   - Default
   - TransparentFX

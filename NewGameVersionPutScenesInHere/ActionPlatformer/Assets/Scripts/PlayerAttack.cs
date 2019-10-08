@@ -17,14 +17,15 @@ public class PlayerAttack : MonoBehaviour
     public Animator animator;
  
 
-   private bool isAttacking;
+   private bool isAttacking = false;
 
     void Update()
     {
+        Debug.Log(isAttacking);
         if(timeBetweenAttack <= 0)
         {
             //then you can attack
-            if(Input.GetKey(KeyCode.K))
+            if(Input.GetKeyDown(KeyCode.K))
             {
                 animator.SetBool("isAttacking", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPossition.position, attackRange, whatIsEnemies);
@@ -39,8 +40,8 @@ public class PlayerAttack : MonoBehaviour
         else
         {
             timeBetweenAttack -= Time.deltaTime;
+            animator.SetBool("isAttacking", false);
         }
-         animator.SetBool("isAttacking", false);
 
     }
     void OnDrawGizmosSelected()

@@ -24,6 +24,7 @@ public class PControl : MonoBehaviour {
 
 	private int moreJump;
 	public int moreJumpVal;
+	private bool isJumping = false;
 
 	//=========
 	//KnockBack
@@ -82,15 +83,16 @@ public class PControl : MonoBehaviour {
 			}
 			knockBackcount -= Time.deltaTime;
 		}
+		jump();
 	
 	}
 	void Update()
 	{
-		if(onground == true)
+		/*if(onground == true)
 		{
 			moreJump = moreJumpVal;	
 			
-			animator.SetBool("isJumping", false);
+			animator.SetBool("Jumping", false);
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space) && moreJump > 0)
@@ -102,9 +104,17 @@ public class PControl : MonoBehaviour {
 		else if(Input.GetKeyDown(KeyCode.Space) && moreJump == 0 && onground == true)
 		{
 			rb.velocity = Vector2.up * jumpHeight;
-			animator.SetBool("isJumping", true);
+			animator.SetBool("Jumping", true);
 		}
-		
+		 */
+		if(isJumping == true)
+		{
+			animator.SetBool("Jumping", true);
+		}
+		if(isJumping == false)
+		{
+			animator.SetBool("Jumping", false);
+		}
 	}
 
 	float CalculateHealth()
@@ -129,6 +139,19 @@ public class PControl : MonoBehaviour {
 			theScale.x *= -1;
 
 			transform.localScale = theScale;
+		}
+	}
+
+		//=========================================================================
+		// Jumping stuff
+		//=========================================================================
+
+	public void jump()
+	{
+		if (Input.GetKeyDown (KeyCode.Space) && isJumping == false)
+		{
+			rb.AddForce((Vector2.up * jumpHeight) * 100);
+			isJumping = true;
 		}
 	}
 
@@ -160,6 +183,10 @@ public class PControl : MonoBehaviour {
 				knockFromright = false;
 			}	
         }
+		if(col.gameObject.tag == "Ground")
+		{
+			isJumping = false;
+		}
     }
 	
 

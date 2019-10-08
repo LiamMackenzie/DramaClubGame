@@ -274,14 +274,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae939faca880d4d499bd04d806fbb9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBetweenAttack: 0.3
+  startTimeBetweenAttack: 0.03
   attackPossition: {fileID: 2417462833783183893}
   attackRange: 1.11
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 0
   damage: 5
-  animator: {fileID: 0}
+  animator: {fileID: 2741889093581500630}
 --- !u!1 &2417462833783183892
 GameObject:
   m_ObjectHideFlags: 0

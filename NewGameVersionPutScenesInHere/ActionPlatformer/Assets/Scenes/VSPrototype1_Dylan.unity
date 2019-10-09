@@ -9642,7 +9642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2115503235
 Transform:
   m_ObjectHideFlags: 0
@@ -9696,6 +9696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamgeVaule: 1
+  gr_Damage: 0
 --- !u!114 &2115503238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9726,7 +9727,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 4.1800156
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 25
@@ -10092,7 +10093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3433991469981180167}
   speed: 10
-  jumpHeight: 25
+  jumpHeight: 1
   floorCheck: {fileID: 4196293735495677029}
   checkRadius: 1
   whatGround:

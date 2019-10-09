@@ -63,7 +63,7 @@ void MoveAndAttack()
 		if(Time.time > nextAttack)
         {
             
-			Instantiate (gr_Projectile, transform.position, Quaternion.identity);
+			Instantiate (gr_Projectile, transform.position , Quaternion.identity);
 			nextAttack = Time.time + attackRate;
 
 			//anim.SetBool("isAttacking", true);

@@ -8,7 +8,12 @@ public class GrrGrr_DD : MonoBehaviour
 public float gr_MoveSpeed;
 public float gr_AttackingDistance;
 
+[SerializeField]
+GameObject gr_Projectile;
+
 private float nextAttack;
+
+[Header("Higher is Slower")]
 public float attackRate = 1.0f;
 
 private Transform gr_Target;
@@ -19,6 +24,7 @@ void Start()
 {
 	gr_Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 	gr_SpriteRenderer = GetComponent<SpriteRenderer>();
+	//gr_Projectile = GetComponent<GameObject>();
 	gr_MoveSpeed = 3f;
 	gr_AttackingDistance = 10f;
 
@@ -56,11 +62,13 @@ void MoveAndAttack()
 	{
 		if(Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackRate;
+            
+			Instantiate (gr_Projectile, transform.position, Quaternion.identity);
+			nextAttack = Time.time + attackRate;
 
-			anim.SetBool("isAttacking", true);
+			//anim.SetBool("isAttacking", true);
 			
-			//Instantiate(gr_Projectile
+			
 		}
 		//Debug.Log("Attacking");
 	}

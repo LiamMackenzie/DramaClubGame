@@ -163,7 +163,7 @@ public class PControl : MonoBehaviour {
 		//checks if the collision is an enemy
 		//checks if the player is getting hit from the left or right
 		//=========================================================================
-        /*if(col.gameObject.tag == "Enemy")
+        if(col.gameObject.tag == "GrrGrr")
         {
 
 			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().enemyDamgeVaule;
@@ -186,17 +186,14 @@ public class PControl : MonoBehaviour {
 		if(col.gameObject.tag == "Ground")
 		{
 			isJumping = false;
-		}*/
-
-
-		if(col.gameObject.tag == "Ground")
-		{
-			isJumping = false;
 		}
+
 
 		
 
-		switch (col.gameObject.tag)
+		
+
+		/* switch (col.gameObject.tag)
 		{
 			case "GrrGrr" :
 			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().gr_Damage;
@@ -207,7 +204,7 @@ public class PControl : MonoBehaviour {
 			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().enemyDamgeVaule;
 			healthBar.value = CalculateHealth();
 			break;
-		}
+		}*/
 
 		/*COMMENTS FOR BRAD TO HELP WITH
 		

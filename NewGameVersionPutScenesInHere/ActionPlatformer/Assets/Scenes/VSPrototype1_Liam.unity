@@ -9860,7 +9860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07c127edf8c36b34093dc4678bf7ae93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDamgeVaule: 1
+  enemyDamgeVaule: 20
+  gr_Damage: 0
 --- !u!114 &2115503238
 MonoBehaviour:
   m_ObjectHideFlags: 0

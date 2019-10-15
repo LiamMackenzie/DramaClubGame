@@ -163,7 +163,7 @@ public class PControl : MonoBehaviour {
 		//checks if the collision is an enemy
 		//checks if the player is getting hit from the left or right
 		//=========================================================================
-        if(col.gameObject.tag == "GrrGrr")
+        if(col.gameObject.tag == "Enemy")
         {
 
 			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().enemyDamgeVaule;

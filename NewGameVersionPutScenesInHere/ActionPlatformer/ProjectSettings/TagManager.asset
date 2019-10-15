@@ -16,6 +16,7 @@ TagManager:
   - GrrJump
   - GrrJumpBig
   - GrrGrr
+  - Breakable Wall
   layers:
   - Default
   - TransparentFX

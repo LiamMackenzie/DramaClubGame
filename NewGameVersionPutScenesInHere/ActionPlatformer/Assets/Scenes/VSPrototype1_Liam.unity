@@ -1291,6 +1291,12 @@ Transform:
   m_Father: {fileID: 993924941}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &355797283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1346442388264758808, guid: b203ca05434f81642b837a57b38e1f40,
+    type: 3}
+  m_PrefabInstance: {fileID: 906678971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &370453044
 GameObject:
   m_ObjectHideFlags: 0
@@ -5468,6 +5474,51 @@ PrefabInstance:
       propertyPath: whatIsEnemies.m_Bits
       value: 4096
       objectReference: {fileID: 0}
+    - target: {fileID: 2233204983691310587, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: numberOfCharacters
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233204983691310587, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: character2
+      value: 
+      objectReference: {fileID: 1233005952}
+    - target: {fileID: 2233204983691310587, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: character1
+      value: 
+      objectReference: {fileID: 355797283}
+    - target: {fileID: 1346442388264758801, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: characters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346442388264758801, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: numberOfCharacters
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346442388264758801, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: characters.Array.data[1]
+      value: 
+      objectReference: {fileID: 1233005952}
+    - target: {fileID: 1346442388264758801, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: characters.Array.data[0]
+      value: 
+      objectReference: {fileID: 355797283}
+    - target: {fileID: 1346442388264758801, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: character1
+      value: 
+      objectReference: {fileID: 355797283}
+    - target: {fileID: 1346442388264758801, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: character2
+      value: 
+      objectReference: {fileID: 1233005952}
     m_RemovedComponents:
     - {fileID: 1346442388264758803, guid: b203ca05434f81642b837a57b38e1f40, type: 3}
     - {fileID: 2233204983691310576, guid: b203ca05434f81642b837a57b38e1f40, type: 3}
@@ -6541,6 +6592,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1233005952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2233204983691310585, guid: b203ca05434f81642b837a57b38e1f40,
+    type: 3}
+  m_PrefabInstance: {fileID: 906678971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1240952657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9861,7 +9918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamgeVaule: 20
-  gr_Damage: 0
 --- !u!114 &2115503238
 MonoBehaviour:
   m_ObjectHideFlags: 0

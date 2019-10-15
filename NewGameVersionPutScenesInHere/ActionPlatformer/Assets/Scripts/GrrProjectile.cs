@@ -24,14 +24,7 @@ public class GrrProjectile : MonoBehaviour
         Destroy (gameObject, gr_ProjDestroyAfterTime);
     }
 
-    void OnTriggerEnter2D(Collider2D other) 
-    {
-        if(other.gameObject.name.Equals ("PControl"))
-        {
-            Debug.Log("Hit!");
-
-        }
-    }
+    
 
 
 }

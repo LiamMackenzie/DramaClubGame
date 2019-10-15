@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isAttacking);
+        //Debug.Log(isAttacking);
         if(timeBetweenAttack <= 0)
         {
             //then you can attack

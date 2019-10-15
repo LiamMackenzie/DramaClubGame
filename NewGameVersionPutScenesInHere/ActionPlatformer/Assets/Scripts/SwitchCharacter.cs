@@ -30,7 +30,7 @@ public class SwitchCharacter : MonoBehaviour
         }
     }
 
-    void Switch1()
+    public void Switch1()
     {
         character1.SetActive(true);
         
@@ -42,7 +42,7 @@ public class SwitchCharacter : MonoBehaviour
 
     }
 
-    void Switch2()
+    public void Switch2()
     {
           character2.SetActive(true);
        

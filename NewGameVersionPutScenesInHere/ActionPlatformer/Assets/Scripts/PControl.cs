@@ -7,6 +7,8 @@ public class PControl : MonoBehaviour {
 
 	public Animator animator;
 
+	SwitchCharacter switchCharacter;
+
 	//========
 	//Movement
 	//========
@@ -52,6 +54,8 @@ public class PControl : MonoBehaviour {
 		currentHealth = maxHealth;
         healthBar.value = CalculateHealth();
 
+		switchCharacter = GetComponent<SwitchCharacter>();
+
 		
 	}
 	
@@ -83,8 +87,15 @@ public class PControl : MonoBehaviour {
 			}
 			knockBackcount -= Time.deltaTime;
 		}
-		jump();
-	
+		//====================
+			jump();
+		//====================
+
+		if(currentHealth <= 0)
+		{
+			switchCharacter.Switch1();
+		}
+		
 	}
 	void Update()
 	{
@@ -142,9 +153,9 @@ public class PControl : MonoBehaviour {
 		}
 	}
 
-		//=========================================================================
-		// Jumping stuff
-		//=========================================================================
+	//=========================================================================
+	// Jumping stuff
+	//=========================================================================
 
 	public void jump()
 	{
@@ -163,7 +174,7 @@ public class PControl : MonoBehaviour {
 		//checks if the collision is an enemy
 		//checks if the player is getting hit from the left or right
 		//=========================================================================
-        if(col.gameObject.tag == "GrrGrr")
+        if(col.gameObject.tag == "Enemy")
         {
 
 			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().enemyDamgeVaule;

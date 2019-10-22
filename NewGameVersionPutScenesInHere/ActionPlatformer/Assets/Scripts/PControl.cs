@@ -7,8 +7,6 @@ public class PControl : MonoBehaviour {
 
 	public Animator animator;
 
-	SwitchCharacter switchCharacter;
-
 	//========
 	//Movement
 	//========
@@ -43,6 +41,8 @@ public class PControl : MonoBehaviour {
     public float currentHealth;
     public Slider healthBar;
 	public bool isDead = false;
+
+
 	
 
 	
@@ -54,8 +54,6 @@ public class PControl : MonoBehaviour {
 
 		currentHealth = maxHealth;
         healthBar.value = CalculateHealth();
-
-		switchCharacter = GetComponent<SwitchCharacter>();
 
 		
 	}
@@ -92,39 +90,10 @@ public class PControl : MonoBehaviour {
 			jump();
 		//====================
 
-		if(currentHealth <= 0)
-		{
-			isDead = true;
-			
-			if(isDead == true)
-			{
-				//switchCharacter.Switch1();
-			}
-
-		}
 		
 	}
 	void Update()
 	{
-		/*if(onground == true)
-		{
-			moreJump = moreJumpVal;	
-			
-			animator.SetBool("Jumping", false);
-		}
-
-		if(Input.GetKeyDown(KeyCode.Space) && moreJump > 0)
-		{	
-			rb.velocity = Vector2.up * jumpHeight;
-			moreJump--;
-			
-		}
-		else if(Input.GetKeyDown(KeyCode.Space) && moreJump == 0 && onground == true)
-		{
-			rb.velocity = Vector2.up * jumpHeight;
-			animator.SetBool("Jumping", true);
-		}
-		 */
 		if(isJumping == true)
 		{
 			animator.SetBool("Jumping", true);

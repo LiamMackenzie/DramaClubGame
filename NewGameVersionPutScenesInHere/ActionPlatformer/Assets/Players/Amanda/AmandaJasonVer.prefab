@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 7160783624333715894}
   - component: {fileID: 7160783624333715890}
   - component: {fileID: 7160783624333715891}
-  - component: {fileID: 7160783624333715901}
   - component: {fileID: 7160783624333715889}
   - component: {fileID: 7160783624333715900}
   - component: {fileID: 7160783624333715897}
@@ -357,21 +356,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 4036065665516804389, guid: b81ad72a6a1a92b40ba47cc538743ed2,
     type: 3}
---- !u!114 &7160783624333715901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7160783624333715892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0859e36e5a990b644bf46b7e494c1c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character1: {fileID: 0}
-  character2: {fileID: 0}
-  characterInPlay: {fileID: 7160783624333715892}
+  isDead: 0
 --- !u!70 &7160783624333715889
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwitchCharacter : MonoBehaviour
 {
     PControl pControl;
+
     public int numberOfCharacters; 
     List<GameObject> characters;
 
@@ -17,7 +18,9 @@ public class SwitchCharacter : MonoBehaviour
     private GameObject currentCharacter;
 
     public GameObject characterInPlay;
-     private void Start() 
+    public CameraFollowMe cam;
+
+    private void Start() 
     {
         characters = new List<GameObject>();
         characters.Add (character1);
@@ -29,20 +32,10 @@ public class SwitchCharacter : MonoBehaviour
     
     void Update()
     {
-        //foreach (GameObject c in characters )
-        //{
-            //Debug.Log(c);
-        //}
-    
         if (Input.GetKeyDown(KeyCode.Q))
 			{
 				Switch();
-			}
-
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            Switch();
-        }
+			} 
     }
 
      public void Switch()
@@ -51,6 +44,7 @@ public class SwitchCharacter : MonoBehaviour
         if (currentIndex >= characters.Count)
             currentIndex = 0;
         currentCharacter = characters[currentIndex];
+        cam.ChangeTargets(currentCharacter);
         
 
         //set pos

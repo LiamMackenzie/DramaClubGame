@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFollowMe : MonoBehaviour
 {
    public Transform target;
+
    public Transform[] potentialTargets;
 		private int targetIndex = 0;
         public float damping = 1;
@@ -50,26 +51,33 @@ public class CameraFollowMe : MonoBehaviour
 
             m_LastTargetPosition = target.position;
 
-            targetChange();
+            //targetChange();
         }
 
 
-        	void targetChange()
+        void targetChange()
 		{
 			if(Input.GetKeyDown(KeyCode.Q))
 			{
-				ChangeTargets();
+				//ChangeTargets();
 			}	
 		}
 
-		void ChangeTargets()
+		public void ChangeTargets(GameObject g)
 		{
+            Transform camTarget = g.transform.Find("CameraPosition");
+            if (camTarget != null)
+                target = camTarget;
+            else
+                target = g.transform;
+            return;
 			targetIndex += 1;
 			if (targetIndex >= potentialTargets.Length)
 			{
 				targetIndex = 0;
-			}
-			target = potentialTargets[targetIndex];
+			} 
+            target = potentialTargets[targetIndex];
+			
 		}
 	}
 

@@ -4,50 +4,65 @@ using UnityEngine;
 
 public class SwitchCharacter : MonoBehaviour
 {
-   
-    public GameObject character1;
-    public GameObject character2;
+    PControl pControl;
+
+    public int numberOfCharacters; 
+    List<GameObject> characters;
+
+    [SerializeField]
+    private GameObject character1;
+    [SerializeField]
+    private GameObject character2;
+
+    private int currentIndex;
+    private GameObject currentCharacter;
+
     public GameObject characterInPlay;
+    public CameraFollowMe cam;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start() 
     {
-        
+        characters = new List<GameObject>();
+        characters.Add (character1);
+        characters.Add (character2);
+        currentIndex = -1;
     }
+    
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
 			{
-				Switch1();
-			}
-
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            Switch2();
-        }
+				Switch();
+			} 
     }
 
-    void Switch1()
+     public void Switch()
     {
-        character1.SetActive(true);
+        currentIndex += 1;
+        if (currentIndex >= characters.Count)
+            currentIndex = 0;
+        currentCharacter = characters[currentIndex];
+        cam.ChangeTargets(currentCharacter);
         
 
-        character1.transform.position = characterInPlay.transform.position;
+        //set pos
+        currentCharacter.transform.position = characterInPlay.transform.position;
+        //turn off old character
         characterInPlay.SetActive(false);
-
-
-
+        //switch them
+        characterInPlay = currentCharacter;
+        //turn on the new one
+        characterInPlay.SetActive(true);
     }
 
-    void Switch2()
+    /*public void Switch2()
     {
-          character2.SetActive(true);
+          characters[1].SetActive(true);
        
 
-        character2.transform.position = characterInPlay.transform.position;
+        characters[1].transform.position = characterInPlay.transform.position;
         characterInPlay.SetActive(false);
-    }
+    } */
 }

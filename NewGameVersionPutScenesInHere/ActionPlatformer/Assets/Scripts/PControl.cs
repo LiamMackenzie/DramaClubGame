@@ -7,6 +7,8 @@ public class PControl : MonoBehaviour {
 
 	public Animator animator;
 
+	SwitchCharacter switchCharacter;
+
 	//========
 	//Movement
 	//========
@@ -40,6 +42,7 @@ public class PControl : MonoBehaviour {
 	public float maxHealth;
     public float currentHealth;
     public Slider healthBar;
+	public bool isDead = false;
 	
 
 	
@@ -51,6 +54,8 @@ public class PControl : MonoBehaviour {
 
 		currentHealth = maxHealth;
         healthBar.value = CalculateHealth();
+
+		switchCharacter = GetComponent<SwitchCharacter>();
 
 		
 	}
@@ -83,8 +88,21 @@ public class PControl : MonoBehaviour {
 			}
 			knockBackcount -= Time.deltaTime;
 		}
-		jump();
-	
+		//====================
+			jump();
+		//====================
+
+		if(currentHealth <= 0)
+		{
+			isDead = true;
+			
+			if(isDead == true)
+			{
+				//switchCharacter.Switch1();
+			}
+
+		}
+		
 	}
 	void Update()
 	{
@@ -142,9 +160,9 @@ public class PControl : MonoBehaviour {
 		}
 	}
 
-		//=========================================================================
-		// Jumping stuff
-		//=========================================================================
+	//=========================================================================
+	// Jumping stuff
+	//=========================================================================
 
 	public void jump()
 	{
@@ -163,7 +181,7 @@ public class PControl : MonoBehaviour {
 		//checks if the collision is an enemy
 		//checks if the player is getting hit from the left or right
 		//=========================================================================
-        if(col.gameObject.tag == "GrrGrr")
+        if(col.gameObject.tag == "Enemy")
         {
 
 			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().enemyDamgeVaule;
@@ -187,53 +205,6 @@ public class PControl : MonoBehaviour {
 		{
 			isJumping = false;
 		}
-
-
-		
-
-		
-
-		/* switch (col.gameObject.tag)
-		{
-			case "GrrGrr" :
-			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().gr_Damage;
-			healthBar.value = CalculateHealth();
-			break;
-
-			case "Enemy" :
-			currentHealth -= col.gameObject.GetComponent<EnemyDamge>().enemyDamgeVaule;
-			healthBar.value = CalculateHealth();
-			break;
-		}*/
-
-		/*COMMENTS FOR BRAD TO HELP WITH
-		
-		THERE ARE TWO SCENARIOS THAT CAN OCCUR
-		1. THE PLAYER IS HIT BY A GENERIC ENEMY -- TAGGED "Enemy".
-		2. THE PLAYER IS HIT BY THE BOSS ENEMY -- TAGGED "GrrGrr"
-		
-		THE TWO SITUATIONS REUQIRE A DIFFERENT DAMAGE VALUE TO BE APPLIED TO THE PLAYERS HEALTH
-		HOWEVER THEY REQUIRE THE KNOCKBACK EFFECT TO HAPPEN REGARDLESS OF WHICH ATTACK IS HITTING
-		THE PLAYER 
-		
-		IE. if(col.transform.position.x < transform.position.x)
-			{
-				rb.AddForce(new Vector2(knockBack, 0) * 2);
-				knockFromright = true;
-			}
-			else
-			{
-				rb.AddForce(new Vector2(-knockBack, 0) * 2);
-				knockFromright = false;
-			}	
-        }
-		
-		HOW SHOULD I APPROACH THIS ISSUE. MY THOUGHTS ARE USING A SWITCH STATEMENT AS ABOVE, HOWEVER IM UNSURE OF HOW TO USE SWITCH STATEMENTS 
-		AND IF STATEMENTS TOGETHER. 
-		WHERE DOES THE BREAK RETURN TO?
-		WHERE WOULD I WRITE THE NEXT SET OF INSTRUCTIONS?
-		HOW WOULD I WRITE IT?
-		 */
 
     }
 	

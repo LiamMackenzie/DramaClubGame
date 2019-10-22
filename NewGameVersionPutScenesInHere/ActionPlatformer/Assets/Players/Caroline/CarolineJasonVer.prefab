@@ -40,9 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382039958692440942}
   - component: {fileID: 382039958692440943}
-  - component: {fileID: 382039958692440937}
   - component: {fileID: 382039958692440941}
-  - component: {fileID: 382039958692440936}
   - component: {fileID: 382039958692440945}
   - component: {fileID: 382039958692440939}
   - component: {fileID: 382039958692440930}
@@ -121,23 +119,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &382039958692440937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382039958692440938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afc4f257083a5d459c4b705d89fb34e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootPosition: {fileID: 2417462833783183893}
-  bulletPre: {fileID: 4811811996252226252, guid: 33a775ba906914c4da5490ddeade3755,
-    type: 3}
-  cooldown: 0
-  cooldownReset: 0.5
 --- !u!50 &382039958692440941
 Rigidbody2D:
   serializedVersion: 4
@@ -159,21 +140,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &382039958692440936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382039958692440938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0859e36e5a990b644bf46b7e494c1c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character1: {fileID: 0}
-  character2: {fileID: 0}
-  characterInPlay: {fileID: 382039958692440938}
 --- !u!70 &382039958692440945
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -243,6 +209,7 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   healthBar: {fileID: 0}
+  isDead: 0
 --- !u!95 &2741889093581500630
 Animator:
   serializedVersion: 3

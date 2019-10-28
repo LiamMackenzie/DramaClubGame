@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 	public float knockBack;
 	public float knockBacklength;
 	public float knockBackcount;
-	private bool  knockFromright;
+	private bool knockFromright;
 	
 		void Start ()
 		{

@@ -39,11 +39,11 @@ namespace Pathfinding {
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
 
-			targetChange();
+			TargetChange();
 			if (target != null && ai != null) ai.destination = target.position;
 		}
 
-		void targetChange()
+		void TargetChange()
 		{
 			if(Input.GetKeyDown(KeyCode.Q))
 			{

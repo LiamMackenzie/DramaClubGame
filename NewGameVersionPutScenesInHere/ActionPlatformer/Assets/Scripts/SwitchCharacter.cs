@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwitchCharacter : MonoBehaviour
 {
-    public PControl pControl;
+    PControl pControl;
 
     public int numberOfCharacters; 
     List<GameObject> characters;
@@ -20,23 +20,37 @@ public class SwitchCharacter : MonoBehaviour
     public GameObject characterInPlay;
     public CameraFollowMe cam;
 
+    private bool characterChangeCooldown = false;
+
     private void Start() 
     {
         characters = new List<GameObject>();
         characters.Add (character1);
         characters.Add (character2);
         currentIndex = -1;
-        pControl = GetComponent<PControl>();
+        pControl = GetComponentInChildren<PControl>();
+
     }
     
 
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && characterChangeCooldown == false)
 		{
 			Switch();
+            pControl = GetComponentInChildren<PControl>();
+            Invoke("ResetCooldown", 1.0f);
+            characterChangeCooldown = true;
+
+
 		} 
+
+        if (pControl.currentHealth <= 0)
+        {
+            Switch();
+            pControl = GetComponentInChildren<PControl>();
+        }
     }
 
      public void Switch()
@@ -56,6 +70,10 @@ public class SwitchCharacter : MonoBehaviour
         characterInPlay = currentCharacter;
         //turn on the new one
         characterInPlay.SetActive(true);
+    }
+    void ResetCooldown()
+    {
+        characterChangeCooldown = false;
     }
 
 }

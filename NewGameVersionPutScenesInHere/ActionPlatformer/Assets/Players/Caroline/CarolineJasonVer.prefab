@@ -206,7 +206,7 @@ MonoBehaviour:
   knockBack: 2000
   knockBacklength: 1.5
   knockBackcount: 0
-  maxHealth: 15
+  maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
   isDead: 0

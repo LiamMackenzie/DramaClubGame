@@ -3024,6 +3024,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9016862135526239279, guid: 03c56356d5a318d468bda4be3aa0f83a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c56356d5a318d468bda4be3aa0f83a, type: 3}
 --- !u!1 &637007438
@@ -7416,6 +7421,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 688638526}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1481544404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 771904541599427962, guid: f89886b8654ea38419a4fd25fc9fed95,
+    type: 3}
+  m_PrefabInstance: {fileID: 706773438}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9899aa286412bb489429723accd12b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1492515125
 GameObject:
   m_ObjectHideFlags: 0
@@ -9625,7 +9642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamgeVaule: 1
-  gr_Damage: 0
 --- !u!114 &2115503238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10035,6 +10051,7 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   healthBar: {fileID: 1974464180}
+  isDead: 0
 --- !u!50 &1346442387895254181
 Rigidbody2D:
   serializedVersion: 4
@@ -10084,9 +10101,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0859e36e5a990b644bf46b7e494c1c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pControl: {fileID: 1346442387895254180}
+  numberOfCharacters: 2
   character1: {fileID: 2233204984529790786}
-  character2: {fileID: 0}
+  character2: {fileID: 2233204984529790786}
   characterInPlay: {fileID: 1346442387895254179}
+  cam: {fileID: 1481544404}
 --- !u!114 &1346442387895254187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10172,9 +10192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0859e36e5a990b644bf46b7e494c1c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pControl: {fileID: 0}
+  numberOfCharacters: 0
   character1: {fileID: 1346442387895254179}
   character2: {fileID: 0}
   characterInPlay: {fileID: 2233204984529790786}
+  cam: {fileID: 0}
 --- !u!114 &2233204984529790785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10258,6 +10281,7 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   healthBar: {fileID: 1629807120}
+  isDead: 0
 --- !u!50 &2233204984529790789
 Rigidbody2D:
   serializedVersion: 4
@@ -10449,15 +10473,10 @@ PrefabInstance:
       propertyPath: potentialTargets.Array.data[1]
       value: 
       objectReference: {fileID: 2233204984529790790}
-    - target: {fileID: 2594260372629764370, guid: 0853bfd38bede3b43bc5af1287e450ae,
+    - target: {fileID: 2594260372629764382, guid: 0853bfd38bede3b43bc5af1287e450ae,
         type: 3}
-      propertyPath: gr_MoveSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2594260372629764370, guid: 0853bfd38bede3b43bc5af1287e450ae,
-        type: 3}
-      propertyPath: gr_AttackingDistance
-      value: 6
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0853bfd38bede3b43bc5af1287e450ae, type: 3}

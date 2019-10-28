@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
             //then you can attack
             if(Input.GetKeyDown(KeyCode.K))
             {
-                GetComponent<AudioSource>().Play();
+                //GetComponent<AudioSource>().Play();
                 animator.SetBool("isAttacking", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPossition.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)

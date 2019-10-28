@@ -3098,6 +3098,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: quitting
       objectReference: {fileID: 0}
+    - target: {fileID: 9016862135526239279, guid: 03c56356d5a318d468bda4be3aa0f83a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c56356d5a318d468bda4be3aa0f83a, type: 3}
 --- !u!114 &631242246 stripped
@@ -5444,6 +5449,11 @@ PrefabInstance:
     - target: {fileID: 2233204983691310591, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
       propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233204983691310591, guid: b203ca05434f81642b837a57b38e1f40,
+        type: 3}
+      propertyPath: currentHealth
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196293735216824673, guid: b203ca05434f81642b837a57b38e1f40,

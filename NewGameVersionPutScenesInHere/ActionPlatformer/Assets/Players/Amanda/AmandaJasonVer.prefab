@@ -230,7 +230,6 @@ GameObject:
   - component: {fileID: 7160783624333715891}
   - component: {fileID: 7160783624333715889}
   - component: {fileID: 7160783624333715900}
-  - component: {fileID: 7160783624333715897}
   - component: {fileID: 7160783624333715896}
   - component: {fileID: 6802772997996098576}
   - component: {fileID: 5232143916712543251}
@@ -387,23 +386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7160783624333715892}
   spawnPoint: {fileID: 0}
---- !u!114 &7160783624333715897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7160783624333715892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afc4f257083a5d459c4b705d89fb34e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootPosition: {fileID: 5472869810991041106}
-  bulletPre: {fileID: 2739106525502246693, guid: d1d9685e386267d4098f4dbf8026f3e7,
-    type: 3}
-  cooldown: 0
-  cooldownReset: 0
 --- !u!114 &7160783624333715896
 MonoBehaviour:
   m_ObjectHideFlags: 0

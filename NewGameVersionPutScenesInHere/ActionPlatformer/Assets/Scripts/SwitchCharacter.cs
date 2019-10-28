@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwitchCharacter : MonoBehaviour
 {
-    PControl pControl;
+    public PControl pControl;
 
     public int numberOfCharacters; 
     List<GameObject> characters;
@@ -26,6 +26,7 @@ public class SwitchCharacter : MonoBehaviour
         characters.Add (character1);
         characters.Add (character2);
         currentIndex = -1;
+        pControl = GetComponent<PControl>();
     }
     
 
@@ -33,9 +34,9 @@ public class SwitchCharacter : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-			{
-				Switch();
-			} 
+		{
+			Switch();
+		} 
     }
 
      public void Switch()
@@ -57,12 +58,4 @@ public class SwitchCharacter : MonoBehaviour
         characterInPlay.SetActive(true);
     }
 
-    /*public void Switch2()
-    {
-          characters[1].SetActive(true);
-       
-
-        characters[1].transform.position = characterInPlay.transform.position;
-        characterInPlay.SetActive(false);
-    } */
 }

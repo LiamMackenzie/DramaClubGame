@@ -4553,12 +4553,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &821893079 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6185883244503247290, guid: 03c56356d5a318d468bda4be3aa0f83a,
-    type: 3}
-  m_PrefabInstance: {fileID: 631242245}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &830169166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5286,7 +5280,8 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseMenuUI
       value: 
-      objectReference: {fileID: 821893079}
+      objectReference: {fileID: 4830822543877592068, guid: 203cb14becd117b4aa4cd7fba7798a27,
+        type: 3}
     - target: {fileID: 2233204983691310585, guid: b203ca05434f81642b837a57b38e1f40,
         type: 3}
       propertyPath: m_IsActive
@@ -7698,12 +7693,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 227754043}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1593822690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6185883243891968014, guid: 03c56356d5a318d468bda4be3aa0f83a,
-    type: 3}
-  m_PrefabInstance: {fileID: 631242245}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1595729639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9743,9 +9732,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  health: 0
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
+  knockBack: 0
+  knockBacklength: 0
+  knockBackcount: 0
 --- !u!50 &2115503239
 Rigidbody2D:
   serializedVersion: 4
@@ -9970,7 +9962,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1593822690}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2136250860

@@ -21,7 +21,7 @@ public class levelLoader : MonoBehaviour
     {
         if (collision.gameObject.tag == "Loader")
         {
-            SceneManager.LoadScene("VSPrototype1_Liam");
+            SceneManager.LoadScene("NewStageDesignLevelJason");
         }
     }
 

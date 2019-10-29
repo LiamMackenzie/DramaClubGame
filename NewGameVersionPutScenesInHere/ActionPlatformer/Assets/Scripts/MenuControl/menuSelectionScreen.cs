@@ -18,7 +18,7 @@ public class menuSelectionScreen : MonoBehaviour
 
     public void startingUp()
     {
-         SceneManager.LoadScene("MainHub");
+         SceneManager.LoadScene("MainHubJasonUpdate");
     }
 
     public void loadgame()

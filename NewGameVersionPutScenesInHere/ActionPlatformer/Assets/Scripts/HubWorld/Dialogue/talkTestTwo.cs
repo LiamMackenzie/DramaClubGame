@@ -7,6 +7,7 @@ public class talkTestTwo : MonoBehaviour
     public static bool Dialogue = false;
 
     public GameObject DialogueBox;
+    public GameObject MatthewBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +46,15 @@ public class talkTestTwo : MonoBehaviour
                 }
            
             }
+            else if(collision.gameObject.tag == "Matthew")
+            {
+                Debug.Log("Sugoi");
+                if(Dialogue == false)
+                {
+                    MatthewBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
             
         }
 
@@ -55,6 +65,13 @@ public class talkTestTwo : MonoBehaviour
             if(Dialogue == true)
             {
                 DialogueBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+        else if(collision.gameObject.tag == "Matthew")
+        {
+            MatthewBox.SetActive(false);
+            {
                 Dialogue = false;
             }
         }

@@ -24,6 +24,7 @@ public class menuSelectionScreen : MonoBehaviour
     public void loadgame()
     {
         Debug.Log("Loading");
+         Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSengUghf2Nb6ibKJD506w8S1h7ryGGxXqN-IwwDRKboUKbkoA/viewform?usp=sf_link");
     }
 
     public void quit()

@@ -9,21 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 238ffbcdeb8194a43b70e6290652e09d
   - enabled: 1
-    path: Assets/Scenes/Hub/MainHub.unity
-    guid: 5ee87999346a15e45a20d47a7a2014b2
+    path: Assets/Scenes/NewStageDesign/NewStageDesignLevelJason.unity
+    guid: 4b0b835aedd418b47a40615ed41ac963
   - enabled: 1
-    path: Assets/Scenes/JASONSFORRESTSCENE.unity
-    guid: 52a4c5e8f0bf77644881829deafb09c2
-  - enabled: 1
-    path: Assets/Scenes/Forest Stages/ForestLevel.unity
-    guid: ca43bf0f19d72a841a00e863b73f6d7c
-  - enabled: 1
-    path: Assets/Scenes/Boss Stages/BossGrrJason.unity
-    guid: 03541303bc529494384a544eab5c3d78
-  - enabled: 1
-    path: Assets/Scenes/VSPrototype1_Liam.unity
-    guid: f35f6a2bcf8929340ab5010095f0f8e5
-  - enabled: 1
-    path: Assets/Scenes/Boss Stages/BossGrrJasonTesting.unity
-    guid: 4db0543d1e4b30e43a4e7b450e4091cc
+    path: Assets/Scenes/Hub/MainHubJasonUpdate.unity
+    guid: 009fdb209dbff1a45851cd1db8af892c
   m_configObjects: {}

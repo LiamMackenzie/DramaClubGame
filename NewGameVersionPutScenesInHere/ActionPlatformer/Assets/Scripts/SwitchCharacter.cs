@@ -13,6 +13,8 @@ public class SwitchCharacter : MonoBehaviour
     private GameObject character1;
     [SerializeField]
     private GameObject character2;
+    [SerializeField]
+    private GameObject character3;
 
     private int currentIndex;
     private GameObject currentCharacter;
@@ -27,6 +29,7 @@ public class SwitchCharacter : MonoBehaviour
         characters = new List<GameObject>();
         characters.Add (character1);
         characters.Add (character2);
+        characters.Add (character3);
         currentIndex = -1;
         pControl = GetComponentInChildren<PControl>();
 
@@ -55,6 +58,7 @@ public class SwitchCharacter : MonoBehaviour
 
      public void Switch()
     {
+        
         currentIndex += 1;
         if (currentIndex >= characters.Count)
             currentIndex = 0;

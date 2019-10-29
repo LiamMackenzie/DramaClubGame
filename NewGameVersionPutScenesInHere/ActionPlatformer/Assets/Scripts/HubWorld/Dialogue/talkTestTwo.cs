@@ -7,10 +7,14 @@ public class talkTestTwo : MonoBehaviour
     public static bool Dialogue = false;
 
     public GameObject DialogueBox;
+    public GameObject MatthewBox;
+    public GameObject ChairBox;
+    public GameObject WindowBox;
+    public GameObject TrashBox;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("The game has started friend");
     }
 
     void Update()
@@ -45,6 +49,46 @@ public class talkTestTwo : MonoBehaviour
                 }
            
             }
+            else if(collision.gameObject.tag == "Matthew")
+            {
+                Debug.Log("Sugoi");
+                if(Dialogue == false)
+                {
+                    MatthewBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
+            else if(collision.gameObject.tag == "Chairs")
+            {
+                Debug.Log ("ChairMan");
+                if(Dialogue == false)
+                {
+                    ChairBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
+
+            else if(collision.gameObject.tag == "Window")
+            {
+                Debug.Log("to the window");
+                if(Dialogue == false)
+                {
+                    WindowBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
+
+            else if(collision.gameObject.tag == "Trash")
+            {
+                Debug.Log("Me");
+                {
+                    if(Dialogue == false)
+                    {
+                        TrashBox.SetActive(true);
+                        Dialogue = true;
+                    }
+                }
+            }
             
         }
 
@@ -55,6 +99,37 @@ public class talkTestTwo : MonoBehaviour
             if(Dialogue == true)
             {
                 DialogueBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+        else if(collision.gameObject.tag == "Matthew")
+        {
+            MatthewBox.SetActive(false);
+            {
+                Dialogue = false;
+            }
+        }
+
+        else if(collision.gameObject.tag == "Chairs")
+        {
+            ChairBox.SetActive(false);
+            Dialogue = false;
+        }
+
+        else if(collision.gameObject.tag == "Window")
+        {
+            if(Dialogue == true)
+            {
+                WindowBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+
+        else if(collision.gameObject.tag == "Trash")
+        {
+            if(Dialogue = true)
+            {
+                TrashBox.SetActive(false);
                 Dialogue = false;
             }
         }

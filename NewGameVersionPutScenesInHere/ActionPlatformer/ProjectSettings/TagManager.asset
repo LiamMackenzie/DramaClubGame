@@ -17,6 +17,10 @@ TagManager:
   - GrrJumpBig
   - GrrGrr
   - Breakable Wall
+  - Matthew
+  - Chairs
+  - Window
+  - Trash
   layers:
   - Default
   - TransparentFX

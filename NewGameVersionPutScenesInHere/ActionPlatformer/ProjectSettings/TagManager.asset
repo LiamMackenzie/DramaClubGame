@@ -21,6 +21,9 @@ TagManager:
   - Chairs
   - Window
   - Trash
+  - Bounce
+  - High
+  - Low
   layers:
   - Default
   - TransparentFX

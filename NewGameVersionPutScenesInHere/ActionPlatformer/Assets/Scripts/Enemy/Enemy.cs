@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
 	public float knockBacklength;
 	public float knockBackcount;
 	private bool knockFromright;
+    public bool isKnockedBack = false;
 	
 		void Start ()
 		{
@@ -31,7 +32,9 @@ public class Enemy : MonoBehaviour {
 		public void TakeDamage(int damage)
 		{
 			health -= damage;
-			if (health <= 0)
+            isKnockedBack = true;
+
+            if (health <= 0)
 			{
 				KillMe();
 			}
@@ -43,12 +46,17 @@ public class Enemy : MonoBehaviour {
 			{
 				rb.AddForce(new Vector2(knockBack, 0) * 2);
 				knockFromright = true;
-			}
+                
+
+
+        }
 			else
 			{
 				rb.AddForce(new Vector2(-knockBack, 0) * 2);
 				knockFromright = false;
-			}
+                
+
+            }
 
 		}
 

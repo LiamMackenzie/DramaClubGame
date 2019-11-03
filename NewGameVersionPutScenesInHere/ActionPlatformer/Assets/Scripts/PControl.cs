@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PControl : MonoBehaviour {
 
-	public Animator animator;
+	Animator animator;
 
 	//========
 	//Movement
@@ -49,7 +49,7 @@ public class PControl : MonoBehaviour {
 	void Start() {
 		moreJump = moreJumpVal;
 		rb = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
 		faceRight = true;
 
 		currentHealth = maxHealth;

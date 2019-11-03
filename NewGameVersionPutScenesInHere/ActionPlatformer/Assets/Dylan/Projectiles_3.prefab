@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3150763249337036354}
   - component: {fileID: 4480215803428937873}
   - component: {fileID: 5523084170765130197}
+  - component: {fileID: 7733722944668310410}
   m_Layer: 0
   m_Name: Projectiles_3
   m_TagString: GrrGrr
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3150763249337036353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: c5fa8161f4a6bb746bd02ade3561b5fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gr_ProjSpeed: 5
   gr_ProjDamage: 5
-  gr_ProjDestroyAfterTime: 0.1
+  gr_ProjDestroyAfterTime: 10
 --- !u!50 &3150763249337036354
 Rigidbody2D:
   serializedVersion: 4
@@ -142,9 +143,28 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!95 &7733722944668310410
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3150763249337036353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ca295f2bfd66834da465f2a818e890e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

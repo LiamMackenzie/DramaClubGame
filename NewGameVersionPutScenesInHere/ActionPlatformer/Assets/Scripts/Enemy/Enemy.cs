@@ -8,17 +8,19 @@ public class Enemy : MonoBehaviour {
 	public GameObject deathEffect;
 
 	private Rigidbody2D rb;
-
+    public bool takedmgWasCalled;
 	public float knockBack;
 	public float knockBacklength;
 	public float knockBackcount;
 	private bool knockFromright;
-    public bool isKnockedBack = false;
+    
 	
 		void Start ()
 		{
-			rb = GetComponent<Rigidbody2D>();
-		}
+		rb = GetComponent<Rigidbody2D>();
+        takedmgWasCalled = false;
+
+        }
 
 		public void DamageDealt (int damage)
 		{
@@ -32,8 +34,8 @@ public class Enemy : MonoBehaviour {
 		public void TakeDamage(int damage)
 		{
 			health -= damage;
-            isKnockedBack = true;
 
+            
             if (health <= 0)
 			{
 				KillMe();
@@ -49,6 +51,7 @@ public class Enemy : MonoBehaviour {
                 
 
 
+
         }
 			else
 			{
@@ -56,7 +59,8 @@ public class Enemy : MonoBehaviour {
 				knockFromright = false;
                 
 
-            }
+
+        }
 
 		}
 

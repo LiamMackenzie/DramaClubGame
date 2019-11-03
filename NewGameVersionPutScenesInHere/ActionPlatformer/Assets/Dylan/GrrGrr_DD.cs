@@ -43,7 +43,6 @@ public class GrrGrr_DD : MonoBehaviour
         rigid2D = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         gr_SpriteRenderer = GetComponent<SpriteRenderer>();
-        //gr_Projectile = GetComponent<GameObject>();
         gr_ProjOffset = new Vector3(0.5f, 0, 0);
 
     }
@@ -51,12 +50,15 @@ public class GrrGrr_DD : MonoBehaviour
     void Update()
     {
         TargetChange();
+        if(isGrounded)
         MoveAndAttack();
-        if (myEnemyScript.isKnockedBack == true)
+
+        //()
+        /*if (myEnemyScript.isKnockedBack == true)
         {
             anim.SetBool("isHit", true);
             anim.SetBool("isWalking", true);
-        }
+        }*/
     }
 
     void LateUpdate()
@@ -86,13 +88,15 @@ public class GrrGrr_DD : MonoBehaviour
 
         if (other.tag == "High")
         {
+            isGrounded = false;
             if (gr_SpriteRenderer.flipX == false)
             {
                 anim.SetBool("isJumping", true);
-                
+                anim.SetBool("isAttacking", false);
                 anim.SetBool("isWalking", false);
                 rigid2D.velocity = new Vector2(-jumpForwardsForce, jumpH);
-                
+                isGrounded = false;
+
 
 
             }
@@ -100,10 +104,11 @@ public class GrrGrr_DD : MonoBehaviour
             if (gr_SpriteRenderer.flipX == true)
             {
                 anim.SetBool("isJumping", true);
-                
+                anim.SetBool("isAttacking", false);
                 anim.SetBool("isWalking", false);
                 rigid2D.velocity = new Vector2(jumpForwardsForce, jumpH);
-                
+                //isGrounded = false;
+
 
 
             }
@@ -111,11 +116,14 @@ public class GrrGrr_DD : MonoBehaviour
 
         if (other.tag == "Low")
         {
+            isGrounded = false;
             if (gr_SpriteRenderer.flipX == false)
             {
                 rigid2D.velocity = new Vector2(-jumpForwardsForce, jumpL);
                 anim.SetBool("isJumping", true);
                 anim.SetBool("isWalking", false);
+                anim.SetBool("isAttacking", false);
+
 
             }
 
@@ -124,6 +132,8 @@ public class GrrGrr_DD : MonoBehaviour
                 rigid2D.velocity = new Vector2(jumpForwardsForce, jumpL);
                 anim.SetBool("isjJumping", true);
                 anim.SetBool("isWalking", false);
+                
+                //isGrounded = false;
 
             }
 
@@ -135,6 +145,7 @@ public class GrrGrr_DD : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isJumping", true);
+            isGrounded = false;
         }
     }
 
@@ -156,33 +167,36 @@ public class GrrGrr_DD : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, gr_MoveSpeed * Time.deltaTime);
         }
-        if (Vector2.Distance(transform.position, target.position) < gr_AttackingDistance && isGrounded == true)
+        if (Vector2.Distance(transform.position, target.position) < gr_AttackingDistance)
         {
             if (Time.time > nextAttack)
             {
+                
 
                 if (gr_SpriteRenderer.flipX == false)
                 {
-                    
+
                     Instantiate(gr_Projectile, (transform.position - gr_ProjOffset), Quaternion.identity);
                     nextAttack = Time.time + attackRate;
-                    
+                    anim.SetBool("isAttacking", true);
+                    anim.SetBool("isWalking", false);
+
                 }
                 if (gr_SpriteRenderer.flipX == true)
                 {
-                    
+
                     Instantiate(gr_Projectile, (transform.position + gr_ProjOffset), Quaternion.identity);
                     nextAttack = Time.time + attackRate;
-                    
-                }
+                    anim.SetBool("isAttacking", true);
+                    anim.SetBool("isWalking", false);
 
-                //anim.SetBool("isAttacking", true);
+                }
                 
-                anim.SetBool("isAttacking", true);
-                anim.SetBool("isWalking", false);
+
 
 
             }
+            
             //Debug.Log("Attacking");
 
         }

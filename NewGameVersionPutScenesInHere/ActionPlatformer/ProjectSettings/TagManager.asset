@@ -13,9 +13,6 @@ TagManager:
   - Ground
   - WallLeft
   - WallRight
-  - GrrJump
-  - GrrJumpBig
-  - GrrGrr
   - Breakable Wall
   - Matthew
   - Chairs

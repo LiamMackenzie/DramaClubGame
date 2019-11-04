@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GrrGrr_DD : MonoBehaviour
 {
@@ -29,6 +30,13 @@ public class GrrGrr_DD : MonoBehaviour
     [Header("Higher is Slower")]
     public float attackRate = 1.0f;
     private Vector2 moveDirection;
+
+    ////////////////
+    //HealthBar
+    /////////////////
+    public Slider healthBar;
+    public float maxHealth;
+    public float currentHealth;
     
     //private Transform target;
     //[SerializeField]
@@ -48,7 +56,10 @@ public class GrrGrr_DD : MonoBehaviour
         //target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         gr_SpriteRenderer = GetComponent<SpriteRenderer>();
         gr_ProjOffset = new Vector3(0.5f, 0, 0);
-        
+        anim.SetBool("isHit", false);
+
+        currentHealth = myEnemyScript.health;
+        healthBar.value = CalculateHealth();
         
 
     }
@@ -60,14 +71,14 @@ public class GrrGrr_DD : MonoBehaviour
         pctarget = GameObject.FindObjectOfType<PControl>();
         moveDirection = (pctarget.transform.position - transform.position).normalized * gr_MoveSpeed;
         MoveAndAttack();
-        
 
-        //()
-        /*if (myEnemyScript.isKnockedBack == true)
+        if(myEnemyScript.takedmgWasCalled == true)
         {
+            CalculateHealth();
+            Debug.Log("I got hit");
             anim.SetBool("isHit", true);
-            anim.SetBool("isWalking", true);
-        }*/
+            //anim.SetBool("isWalking", false);
+        }
     }
 
     void LateUpdate()
@@ -210,6 +221,10 @@ public class GrrGrr_DD : MonoBehaviour
             //Debug.Log("Attacking");
 
         }
+    }
+    float CalculateHealth()
+    {
+        return currentHealth / myEnemyScript.health;
     }
 
 }

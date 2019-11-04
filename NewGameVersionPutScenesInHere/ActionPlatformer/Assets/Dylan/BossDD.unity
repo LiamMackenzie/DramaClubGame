@@ -7142,6 +7142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerJasonVer Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5258326489482519344, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1234940339}
     - target: {fileID: 4878692028455035374, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7197,11 +7202,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5258326489482519344, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1234940339}
     - target: {fileID: 8134264534473228935, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
       propertyPath: knockBack
@@ -46568,6 +46568,11 @@ PrefabInstance:
       propertyPath: sPlayer
       value: 
       objectReference: {fileID: 597912778}
+    - target: {fileID: 3817500005754078626, guid: 62a355806ea632a46b82f81fe53c6666,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62a355806ea632a46b82f81fe53c6666, type: 3}
 --- !u!1 &2594260372925260186 stripped

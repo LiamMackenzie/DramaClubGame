@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private float timeBetweenAttack;
-    public float startTimeBetweenAttack;
-
-    public Transform attackPossition;
+    public float attackRate = 1.0f;
+    private float nextAttack;
+    public Transform attackPosition;
     public float attackRange;
 
     public LayerMask whatIsEnemies;
@@ -15,42 +14,39 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
     
 
-    public Animator animator;
- 
+    private Animator animator;
 
-   private bool isAttacking = false;
 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+    
     void Update()
     {
-        //Debug.Log(isAttacking);
-        if(timeBetweenAttack <= 0)
+        if(Input.GetKeyDown(KeyCode.K) && Time.time > nextAttack) //nextAttack = Time.time + attackRate;
         {
-            
-            //then you can attack
-            if(Input.GetKeyDown(KeyCode.K))
-            {
                 //GetComponent<AudioSource>().Play();
-                animator.SetBool("isAttacking", true);
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPossition.position, attackRange, whatIsEnemies);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
-                }
-                timeBetweenAttack = startTimeBetweenAttack;
+            animator.SetBool("isAttacking", true);
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
+            for (int i = 0; i < enemiesToDamage.Length; i++)
+            {
+                enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
             }
-            
+                nextAttack = Time.time + attackRate;
         }
         else
         {
-            timeBetweenAttack -= Time.deltaTime;
+            //timeBetweenAttack -= Time.deltaTime;
             animator.SetBool("isAttacking", false);
         }
 
     }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPossition.position, attackRange);
+        Gizmos.DrawWireSphere(attackPosition.position, attackRange);
     }
 
 }

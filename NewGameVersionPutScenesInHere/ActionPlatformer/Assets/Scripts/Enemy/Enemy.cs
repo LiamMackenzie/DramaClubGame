@@ -33,6 +33,8 @@ public class Enemy : MonoBehaviour {
 
 		public void TakeDamage(int damage)
 		{
+			Invoke("ResetHitAnim", 1.0f);
+			takedmgWasCalled = true;
 			health -= damage;
 
             
@@ -62,6 +64,11 @@ public class Enemy : MonoBehaviour {
 
         }
 
+		}
+
+		void ResetHitAnim()
+		{
+			takedmgWasCalled = false;
 		}
 
 		void KillMe()

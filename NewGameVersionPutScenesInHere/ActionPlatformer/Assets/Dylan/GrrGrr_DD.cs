@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GrrGrr_DD : MonoBehaviour
 {
@@ -28,42 +29,62 @@ public class GrrGrr_DD : MonoBehaviour
 
     [Header("Higher is Slower")]
     public float attackRate = 1.0f;
+    private Vector2 moveDirection;
 
+    ////////////////
+    //HealthBar
+    /////////////////
+    public Slider healthBar;
+    public float maxHealth;
+    public float currentHealth;
+    
     //private Transform target;
-    public Transform target;
-    public Transform[] potentialTargets;
-    private int targetIndex = 0;
+    //[SerializeField]
+    //public Transform[] target;
+    //public Transform[] potentialTargets;
+    //private int targetIndex = 0;
     Animator anim;
     private SpriteRenderer gr_SpriteRenderer;
+
+    private PControl pctarget;
     /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
     void Start()
     {
         myEnemyScript = GetComponent<Enemy>();
         anim = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        //target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         gr_SpriteRenderer = GetComponent<SpriteRenderer>();
         gr_ProjOffset = new Vector3(0.5f, 0, 0);
+        anim.SetBool("isHit", false);
+
+        currentHealth = myEnemyScript.health;
+        healthBar.value = CalculateHealth();
+        
 
     }
 
     void Update()
     {
-        TargetChange();
-        if(isGrounded)
+        //TargetChange();
+        //if(isGrounded)
+        pctarget = GameObject.FindObjectOfType<PControl>();
+        moveDirection = (pctarget.transform.position - transform.position).normalized * gr_MoveSpeed;
         MoveAndAttack();
 
-        //()
-        /*if (myEnemyScript.isKnockedBack == true)
+        if(myEnemyScript.takedmgWasCalled == true)
         {
+            CalculateHealth();
+            Debug.Log("I got hit");
             anim.SetBool("isHit", true);
-            anim.SetBool("isWalking", true);
-        }*/
+            //anim.SetBool("isWalking", false);
+        }
     }
 
     void LateUpdate()
     {
         FaceDirection();
+        
     }
 
 
@@ -151,7 +172,7 @@ public class GrrGrr_DD : MonoBehaviour
 
     void FaceDirection() //Assuming player is on left of grrgrr at start
     {
-        if (transform.position.x - target.position.x < 0f)
+        if (transform.position.x - pctarget.transform.position.x < 0f)
         {
             gr_SpriteRenderer.flipX = true;
         }
@@ -163,11 +184,11 @@ public class GrrGrr_DD : MonoBehaviour
 
     void MoveAndAttack()
     {
-        if (Vector2.Distance(transform.position, target.position) > gr_AttackingDistance)
+        if (Vector2.Distance(transform.position, pctarget.transform.position) > gr_AttackingDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, gr_MoveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, pctarget.transform.position, gr_MoveSpeed * Time.deltaTime);
         }
-        if (Vector2.Distance(transform.position, target.position) < gr_AttackingDistance)
+        if (Vector2.Distance(transform.position, pctarget.transform.position) < gr_AttackingDistance)
         {
             if (Time.time > nextAttack)
             {
@@ -201,26 +222,9 @@ public class GrrGrr_DD : MonoBehaviour
 
         }
     }
-
-    void TargetChange()
+    float CalculateHealth()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            ChangeTargets();
-        }
+        return currentHealth / myEnemyScript.health;
     }
-
-    void ChangeTargets()
-    {
-        targetIndex += 1;
-        if (targetIndex >= potentialTargets.Length)
-        {
-            targetIndex = 0;
-        }
-
-        target = potentialTargets[targetIndex];
-    }
-
-
 
 }

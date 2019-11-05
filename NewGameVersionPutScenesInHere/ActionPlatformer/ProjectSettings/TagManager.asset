@@ -21,6 +21,10 @@ TagManager:
   - Bounce
   - High
   - Low
+  - GrrGrr
+  - GrrJumpBig
+  - GrrJump
+  - Painting
   layers:
   - Default
   - TransparentFX

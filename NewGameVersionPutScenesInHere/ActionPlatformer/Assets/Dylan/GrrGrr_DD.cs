@@ -24,7 +24,7 @@ public class GrrGrr_DD : MonoBehaviour
     private float nextAttack;
 
     [Header("Higher is Slower")]
-    public float attackRate = 1.0f;
+    public float gr_AttackRate = 1.0f;
 
     public Slider healthBar;
     public float maxHealth;
@@ -147,14 +147,14 @@ public class GrrGrr_DD : MonoBehaviour
                 if (gr_SpriteRenderer.flipX == false)
                 {
                     Instantiate(gr_Projectile, (transform.position - gr_ProjOffset), Quaternion.identity);
-                    nextAttack = Time.time + attackRate;
+                    nextAttack = Time.time + gr_AttackRate;
                     anim.SetBool("isAttacking", true);
                     anim.SetBool("isWalking", false);
                 }
                 if (gr_SpriteRenderer.flipX == true)
                 {
                     Instantiate(gr_Projectile, (transform.position + gr_ProjOffset), Quaternion.identity);
-                    nextAttack = Time.time + attackRate;
+                    nextAttack = Time.time + gr_AttackRate;
                     anim.SetBool("isAttacking", true);
                     anim.SetBool("isWalking", false);
                 }

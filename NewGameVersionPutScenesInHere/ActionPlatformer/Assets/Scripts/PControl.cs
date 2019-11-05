@@ -23,7 +23,7 @@ public class PControl : MonoBehaviour {
 	public float checkRadius;
 	public LayerMask whatGround;
 
-	private int moreJump;
+	//private int moreJump;
 	public int moreJumpVal;
 	private bool isJumping = false;
 
@@ -48,7 +48,7 @@ public class PControl : MonoBehaviour {
 
 	
 	void Start() {
-		moreJump = moreJumpVal;
+		//moreJump = moreJumpVal;
 		rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 		faceRight = true;

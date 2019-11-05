@@ -13,6 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask whatIsEnemies;
 
     public int damage;
+    
 
     public Animator animator;
  

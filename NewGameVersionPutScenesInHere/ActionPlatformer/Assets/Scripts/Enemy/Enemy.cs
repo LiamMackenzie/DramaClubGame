@@ -8,16 +8,19 @@ public class Enemy : MonoBehaviour {
 	public GameObject deathEffect;
 
 	private Rigidbody2D rb;
-
+    public bool takedmgWasCalled;
 	public float knockBack;
 	public float knockBacklength;
 	public float knockBackcount;
 	private bool knockFromright;
+    
 	
 		void Start ()
 		{
-			rb = GetComponent<Rigidbody2D>();
-		}
+		rb = GetComponent<Rigidbody2D>();
+        takedmgWasCalled = false;
+
+        }
 
 		public void DamageDealt (int damage)
 		{
@@ -30,8 +33,12 @@ public class Enemy : MonoBehaviour {
 
 		public void TakeDamage(int damage)
 		{
+			Invoke("ResetHitAnim", 1.0f);
+			takedmgWasCalled = true;
 			health -= damage;
-			if (health <= 0)
+
+            
+            if (health <= 0)
 			{
 				KillMe();
 			}
@@ -43,13 +50,25 @@ public class Enemy : MonoBehaviour {
 			{
 				rb.AddForce(new Vector2(knockBack, 0) * 2);
 				knockFromright = true;
-			}
+                
+
+
+
+        }
 			else
 			{
 				rb.AddForce(new Vector2(-knockBack, 0) * 2);
 				knockFromright = false;
-			}
+                
 
+
+        }
+
+		}
+
+		void ResetHitAnim()
+		{
+			takedmgWasCalled = false;
 		}
 
 		void KillMe()

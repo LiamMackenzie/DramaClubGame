@@ -13,14 +13,14 @@ TagManager:
   - Ground
   - WallLeft
   - WallRight
-  - GrrJump
-  - GrrJumpBig
-  - GrrGrr
   - Breakable Wall
   - Matthew
   - Chairs
   - Window
   - Trash
+  - Bounce
+  - High
+  - Low
   layers:
   - Default
   - TransparentFX

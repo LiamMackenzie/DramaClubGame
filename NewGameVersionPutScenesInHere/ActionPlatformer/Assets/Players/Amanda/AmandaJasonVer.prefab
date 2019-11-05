@@ -339,7 +339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8e03b6f98e06c4dbb14d6457e4886b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 6802772997996098576}
   speed: 10
   jumpHeight: 25
   floorCheck: {fileID: 5472869811722953074}
@@ -348,7 +347,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   moreJumpVal: 0
-  knockBack: 2000
+  knockBack: 20
   knockBacklength: 1.5
   knockBackcount: 0
   maxHealth: 25
@@ -408,7 +407,7 @@ Animator:
   m_GameObject: {fileID: 7160783624333715892}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d035c54c61c64a14c874b5de2d4c981c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 512ad4b02e5bead419925abf1a981aa1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -33930,7 +33930,7 @@ GameObject:
   - component: {fileID: 632852154}
   - component: {fileID: 632852153}
   m_Layer: 0
-  m_Name: Mushroom_0 (10)
+  m_Name: '#BGMushrooms'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34975,7 +34975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619094256}
   m_Layer: 0
-  m_Name: '#Boundaries'
+  m_Name: '#PlayBoundary'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

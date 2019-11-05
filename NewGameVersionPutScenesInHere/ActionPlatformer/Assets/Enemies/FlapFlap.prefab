@@ -188,6 +188,7 @@ MonoBehaviour:
   potentialTargets:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &8656624290556369273
 Rigidbody2D:
   serializedVersion: 4

@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Light Trail
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: EFFECT_BUMP _ALPHAPREMULTIPLY_ON _EMISSION _FADING_ON
+  m_ShaderKeywords: EFFECT_BUMP ETC1_EXTERNAL_ALPHA _ALPHAPREMULTIPLY_ON _EMISSION
+    _FADING_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

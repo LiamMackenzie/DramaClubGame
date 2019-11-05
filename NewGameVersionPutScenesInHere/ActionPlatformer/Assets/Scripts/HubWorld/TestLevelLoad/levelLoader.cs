@@ -23,6 +23,7 @@ public class levelLoader : MonoBehaviour
         {
             SceneManager.LoadScene("NewStageDesignLevelJason");
         }
+        
     }
 
     public void Restart()

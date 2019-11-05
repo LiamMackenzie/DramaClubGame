@@ -339,7 +339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8e03b6f98e06c4dbb14d6457e4886b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 5506916248429868385}
   speed: 10
   jumpHeight: 25
   floorCheck: {fileID: 6482853330105442307}
@@ -351,8 +350,8 @@ MonoBehaviour:
   knockBack: 2000
   knockBacklength: 1.5
   knockBackcount: 0
-  maxHealth: 25
-  currentHealth: 0
+  maxHealth: 100
+  currentHealth: 100
   healthBar: {fileID: 4036065665516804389, guid: b81ad72a6a1a92b40ba47cc538743ed2,
     type: 3}
   isDead: 0

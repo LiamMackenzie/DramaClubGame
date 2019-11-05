@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GrrGrr_DD : MonoBehaviour
-{
-    Enemy myEnemyScript;
+{  
     public float gr_MoveSpeed;
     public float gr_AttackingDistance;
-    bool isGrounded = false;
 
-    Rigidbody2D rigid2D;
+    private Rigidbody2D rigid2D;
 
     [SerializeField]
     GameObject gr_Projectile;
@@ -25,57 +23,40 @@ public class GrrGrr_DD : MonoBehaviour
 
     private float nextAttack;
 
-    //private Animator anim;
-
     [Header("Higher is Slower")]
     public float attackRate = 1.0f;
-    private Vector2 moveDirection;
 
-    ////////////////
-    //HealthBar
-    /////////////////
     public Slider healthBar;
     public float maxHealth;
     public float currentHealth;
-    
-    //private Transform target;
-    //[SerializeField]
-    //public Transform[] target;
-    //public Transform[] potentialTargets;
-    //private int targetIndex = 0;
+   
     Animator anim;
     private SpriteRenderer gr_SpriteRenderer;
-
     private PControl pctarget;
-    /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    private Enemy myEnemyScript;
+
+    /* ===================================================================================================================================================================== */
+    
     void Start()
     {
         myEnemyScript = GetComponent<Enemy>();
         anim = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
-        //target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         gr_SpriteRenderer = GetComponent<SpriteRenderer>();
         gr_ProjOffset = new Vector3(0.5f, 0, 0);
         anim.SetBool("isHit", false);
-
         currentHealth = myEnemyScript.health;
         healthBar.value = CalculateHealth();
-        
-
     }
 
     void Update()
     {
-        //TargetChange();
-        //if(isGrounded)
         pctarget = GameObject.FindObjectOfType<PControl>();
-        moveDirection = (pctarget.transform.position - transform.position).normalized * gr_MoveSpeed;
+
         MoveAndAttack();
 
-        if(myEnemyScript.takedmgWasCalled == true)
+        if(myEnemyScript.takeDmg == true)
         {
-            CalculateHealth();
-            Debug.Log("I got hit");
             anim.SetBool("isHit", true);
             //anim.SetBool("isWalking", false);
         }
@@ -83,10 +64,8 @@ public class GrrGrr_DD : MonoBehaviour
 
     void LateUpdate()
     {
-        FaceDirection();
-        
+        FaceDirection();  
     }
-
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -94,58 +73,38 @@ public class GrrGrr_DD : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             anim.SetBool("isJumping", false);
-            anim.SetBool("isWalking", true);
-            isGrounded = true;
-
-
+            anim.SetBool("isWalking", true);   
             Debug.Log("Ground");
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
-        
-
         if (other.tag == "High")
         {
-            isGrounded = false;
             if (gr_SpriteRenderer.flipX == false)
             {
                 anim.SetBool("isJumping", true);
                 anim.SetBool("isAttacking", false);
                 anim.SetBool("isWalking", false);
                 rigid2D.velocity = new Vector2(-jumpForwardsForce, jumpH);
-                isGrounded = false;
-
-
-
             }
-
             if (gr_SpriteRenderer.flipX == true)
             {
                 anim.SetBool("isJumping", true);
                 anim.SetBool("isAttacking", false);
                 anim.SetBool("isWalking", false);
                 rigid2D.velocity = new Vector2(jumpForwardsForce, jumpH);
-                //isGrounded = false;
-
-
-
             }
         }
-
         if (other.tag == "Low")
         {
-            isGrounded = false;
             if (gr_SpriteRenderer.flipX == false)
             {
                 rigid2D.velocity = new Vector2(-jumpForwardsForce, jumpL);
                 anim.SetBool("isJumping", true);
                 anim.SetBool("isWalking", false);
                 anim.SetBool("isAttacking", false);
-
-
             }
 
             if (gr_SpriteRenderer.flipX == true)
@@ -153,20 +112,13 @@ public class GrrGrr_DD : MonoBehaviour
                 rigid2D.velocity = new Vector2(jumpForwardsForce, jumpL);
                 anim.SetBool("isjJumping", true);
                 anim.SetBool("isWalking", false);
-                
-                //isGrounded = false;
-
             }
 
-        }
-
-        
-
+        }       
         if (other.tag == "Bounce")
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isJumping", true);
-            isGrounded = false;
         }
     }
 
@@ -192,39 +144,26 @@ public class GrrGrr_DD : MonoBehaviour
         {
             if (Time.time > nextAttack)
             {
-                
-
                 if (gr_SpriteRenderer.flipX == false)
                 {
-
                     Instantiate(gr_Projectile, (transform.position - gr_ProjOffset), Quaternion.identity);
                     nextAttack = Time.time + attackRate;
                     anim.SetBool("isAttacking", true);
                     anim.SetBool("isWalking", false);
-
                 }
                 if (gr_SpriteRenderer.flipX == true)
                 {
-
                     Instantiate(gr_Projectile, (transform.position + gr_ProjOffset), Quaternion.identity);
                     nextAttack = Time.time + attackRate;
                     anim.SetBool("isAttacking", true);
                     anim.SetBool("isWalking", false);
-
                 }
-                
-
-
-
             }
-            
-            //Debug.Log("Attacking");
-
         }
     }
+
     float CalculateHealth()
     {
         return currentHealth / myEnemyScript.health;
     }
-
 }

@@ -52,7 +52,6 @@ public class PControl : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 		faceRight = true;
-
 		currentHealth = maxHealth;
         healthBar.value = CalculateHealth();
 
@@ -88,7 +87,7 @@ public class PControl : MonoBehaviour {
 			knockBackcount -= Time.deltaTime;
 		}
 		//====================
-			jump();
+			Jump();
 		//====================
 
 		
@@ -134,7 +133,7 @@ public class PControl : MonoBehaviour {
 	// Jumping stuff
 	//=========================================================================
 
-	public void jump()
+	public void Jump()
 	{
 		if (Input.GetKeyDown (KeyCode.Space) && isJumping == false)
 		{

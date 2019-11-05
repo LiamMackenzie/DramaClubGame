@@ -9,17 +9,22 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPosition;
     public float attackRange;
 
-    public LayerMask whatIsEnemies;
-
+    [HideInInspector]
+    public LayerMask enemyMask;
     public int damage;
     
 
     private Animator animator;
 
-
+    void Awake()
+    {
+        enemyMask = LayerMask.GetMask("Enemy");
+    }
     void Start()
     {
         animator = GetComponent<Animator>();
+        //Debug.Log(LayerMask.LayerToName(12));
+        
     }
     
     void Update()
@@ -28,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
         {
                 //GetComponent<AudioSource>().Play();
             animator.SetBool("isAttacking", true);
-            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, enemyMask);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);

@@ -21,6 +21,7 @@ public class PControl : MonoBehaviour {
 	private bool onground;
 	public Transform floorCheck;
 	public float checkRadius;
+
 	public LayerMask whatGround;
 
 	//private int moreJump;
@@ -42,6 +43,8 @@ public class PControl : MonoBehaviour {
     public float currentHealth;
     public Slider healthBar;
 	public bool isDead = false;
+
+
 
 
 	

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PControl : MonoBehaviour {
 
@@ -174,6 +175,11 @@ public class PControl : MonoBehaviour {
 		{
 			isJumping = false;
 		}
+
+		 if (col.gameObject.tag == "Loader")
+        {
+            SceneManager.LoadScene("BossDD");
+        }
 
     }
 	

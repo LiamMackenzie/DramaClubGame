@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub/MainHubJasonUpdate.unity
     guid: 009fdb209dbff1a45851cd1db8af892c
+  - enabled: 1
+    path: Assets/Dylan/BossDD.unity
+    guid: a4a2ffe38040f244c824adfcf4d44f68
   m_configObjects: {}

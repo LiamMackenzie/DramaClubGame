@@ -11,6 +11,8 @@ public class talkTestTwo : MonoBehaviour
     public GameObject ChairBox;
     public GameObject WindowBox;
     public GameObject TrashBox;
+    public GameObject DylanBox;
+    public GameObject PaintBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,12 +83,32 @@ public class talkTestTwo : MonoBehaviour
             else if(collision.gameObject.tag == "Trash")
             {
                 Debug.Log("Me");
-                {
+                
                     if(Dialogue == false)
                     {
                         TrashBox.SetActive(true);
                         Dialogue = true;
                     }
+            }
+            
+
+            else if(collision.gameObject.name == "Dylan")
+            {
+                Debug.Log("Hi");
+                if(Dialogue == false)
+                {
+                    DylanBox.SetActive(true);
+                    Dialogue = true;
+                }
+
+            }
+
+            else if(collision.gameObject.tag == "Painting")
+            {
+                if(Dialogue == false)
+                {
+                    PaintBox.SetActive(true);
+                    Dialogue = true;
                 }
             }
             
@@ -130,6 +152,23 @@ public class talkTestTwo : MonoBehaviour
             if(Dialogue = true)
             {
                 TrashBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+
+        else if(collision.gameObject.name == "Dylan")
+        {
+            if(Dialogue = true)
+            {
+                DylanBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+        else if(collision.gameObject.tag == "Painting")
+        {
+            if(Dialogue = true)
+            {
+                PaintBox.SetActive(false);
                 Dialogue = false;
             }
         }

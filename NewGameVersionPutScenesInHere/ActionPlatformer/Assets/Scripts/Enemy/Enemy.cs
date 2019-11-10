@@ -20,10 +20,6 @@ public class Enemy : MonoBehaviour {
 	    rb = GetComponent<Rigidbody2D>();
     }
 
-    private void LateUpdate()
-    {
-        takeDmg = false;
-    }
 
     public void DamageDealt (int damage)
 	{
@@ -36,7 +32,7 @@ public class Enemy : MonoBehaviour {
 
 	public void TakeDamage(int damage)
 	{
-		//Invoke("ResetHitAnim", 1.0f);
+		
 		takeDmg = true;
 		health -= damage;
 
@@ -57,13 +53,18 @@ public class Enemy : MonoBehaviour {
 		{
 			rb.AddForce(new Vector2(-knockBack, 0) * 2);             
         }
-
-	}
+        
+    }
 
 	void KillMe()
 	{
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}
+
+    public void ResetHitAnim()
+    {
+        takeDmg = false;
+    }
 
 }

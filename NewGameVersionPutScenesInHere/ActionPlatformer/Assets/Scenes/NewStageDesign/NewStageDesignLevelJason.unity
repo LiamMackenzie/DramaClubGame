@@ -173,7 +173,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -617,7 +617,7 @@ PrefabInstance:
     - target: {fileID: 7454955466017963576, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7454955466017963577, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
@@ -674,8 +674,56 @@ PrefabInstance:
       propertyPath: currentHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4673432109830735993, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackPosition
+      value: 
+      objectReference: {fileID: 65709971}
+    - target: {fileID: 4673432109830735993, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635532107458497846, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackPosition
+      value: 
+      objectReference: {fileID: 65709973}
+    - target: {fileID: 4635532107458497846, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565913527202279207, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackPosition
+      value: 
+      objectReference: {fileID: 65709972}
+    - target: {fileID: 6565913527202279207, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1, type: 3}
+--- !u!4 &65709971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4878692029302195768, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 65709970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &65709972 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6372886646619709798, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 65709970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &65709973 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4878692029634072384, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 65709970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &71532004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1376,6 +1424,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: health
@@ -1638,6 +1691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
@@ -2018,6 +2076,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7915727666576913794, guid: 03c56356d5a318d468bda4be3aa0f83a,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6185883243938669758, guid: 03c56356d5a318d468bda4be3aa0f83a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2323,11 +2386,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7915727666576913794, guid: 03c56356d5a318d468bda4be3aa0f83a,
-        type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7915727667994880961, guid: 03c56356d5a318d468bda4be3aa0f83a,
         type: 3}
       propertyPath: m_Value
@@ -2417,7 +2475,7 @@ MonoBehaviour:
   health: 1
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -2905,7 +2963,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -104808,7 +104866,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -105292,6 +105350,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: health
@@ -105432,7 +105495,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -105641,7 +105704,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -106433,6 +106496,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: health
@@ -107013,6 +107081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
@@ -107784,6 +107857,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: health
@@ -108046,7 +108124,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -108204,6 +108282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
@@ -109007,7 +109090,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -109671,6 +109754,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: health
@@ -109902,7 +109990,7 @@ MonoBehaviour:
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
@@ -110611,6 +110699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: potentialTargets.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: gr_AttackRate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}

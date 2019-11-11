@@ -44,6 +44,8 @@ public class PControl : MonoBehaviour {
     public Slider healthBar;
 	public bool isDead = false;
 
+	private int deathCounter = 0;
+
 
 
 
@@ -104,6 +106,16 @@ public class PControl : MonoBehaviour {
 		if(isJumping == false)
 		{
 			animator.SetBool("Jumping", false);
+		}
+
+		if(currentHealth <= 0)
+		{
+			deathCounter ++;
+		}
+
+		if(deathCounter >= 3)
+		{
+			SceneManager.LoadScene("BossDD");
 		}
 	}
 

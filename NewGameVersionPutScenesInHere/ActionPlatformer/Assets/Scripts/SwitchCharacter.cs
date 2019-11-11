@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SwitchCharacter : MonoBehaviour
 {
     PControl pControl;
@@ -23,6 +23,9 @@ public class SwitchCharacter : MonoBehaviour
     public CameraFollowMe cam;
 
     private bool characterChangeCooldown = false;
+
+
+    private int deathCounter = 0;
 
     private void Start() 
     {
@@ -53,6 +56,12 @@ public class SwitchCharacter : MonoBehaviour
         {
             Switch();
             pControl = GetComponentInChildren<PControl>();
+            deathCounter++;
+        }
+
+        if(deathCounter >= 3)
+        {
+            SceneManager.LoadScene("BossDD");
         }
     }
 

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2827400362784160615}
   - component: {fileID: 2827400362784160600}
-  - component: {fileID: 2827400362784160601}
   - component: {fileID: 2924524365132098562}
+  - component: {fileID: 142132405369674293}
   - component: {fileID: 2827400362784160613}
   - component: {fileID: 2827400362784160614}
   - component: {fileID: 2827400362784160612}
@@ -84,29 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2827400362784160601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2827400362784160602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11391e81cf14af48aa5b0f817a20c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gr_MoveSpeed: 0
-  gr_AttackingDistance: 10
-  gr_Projectile: {fileID: 1646602392570366944, guid: 257139dd61a01234f89e316141ec4383,
-    type: 3}
-  jumpH: 0
-  jumpL: 0
-  jumpForwardsForce: 0
-  attackRate: 3
-  healthBar: {fileID: 0}
-  maxHealth: 0
-  currentHealth: 0
 --- !u!114 &2924524365132098562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +97,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamgeVaule: 10
+--- !u!114 &142132405369674293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2827400362784160602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2b654ed8e8cd9419a5af927c6ff442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gr_MoveSpeed: 0
+  gr_AttackingDistance: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  gr_Projectile: {fileID: 1646602392570366944, guid: 257139dd61a01234f89e316141ec4383,
+    type: 3}
+  jumpH: 0
+  jumpL: 0
+  jumpForwardsForce: 0
+  gr_AttackRate: 2
+  onGround: 1
 --- !u!61 &2827400362784160613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ MonoBehaviour:
   health: 20
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  takedmgWasCalled: 0
+  takeDmg: 0
   knockBack: 0.2
   knockBacklength: 1
   knockBackcount: 0

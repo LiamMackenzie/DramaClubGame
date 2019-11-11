@@ -13,6 +13,10 @@ public class talkTestTwo : MonoBehaviour
     public GameObject TrashBox;
     public GameObject DylanBox;
     public GameObject PaintBox;
+    public GameObject StageBox;
+    public GameObject BunnyBox;
+    public GameObject MicroBox;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -111,6 +115,32 @@ public class talkTestTwo : MonoBehaviour
                     Dialogue = true;
                 }
             }
+            else if(collision.gameObject.name == "Stage")
+            {
+                if(Dialogue == false)
+                {
+                    StageBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
+
+            else if(collision.gameObject.name == "Bunny")
+            {
+                if(Dialogue == false)
+                {
+                    BunnyBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
+
+            else if(collision.gameObject.name == "microphone")
+            {
+                if(Dialogue == false)
+                {
+                    MicroBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
             
         }
 
@@ -169,6 +199,33 @@ public class talkTestTwo : MonoBehaviour
             if(Dialogue = true)
             {
                 PaintBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+
+        else if(collision.gameObject.name == "Stage")
+        {
+            if(Dialogue = true)
+            {
+                StageBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+
+        else if(collision.gameObject.name == "Bunny")
+        {
+            if(Dialogue = true)
+            {
+                BunnyBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+
+        else if(collision.gameObject.name == "microphone")
+        {
+            if(Dialogue = true)
+            {
+                MicroBox.SetActive(false);
                 Dialogue = false;
             }
         }

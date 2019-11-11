@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class levelLoader : MonoBehaviour
 {
+    public GameObject NowLoading;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class levelLoader : MonoBehaviour
     {
         if (collision.gameObject.tag == "Loader")
         {
+            NowLoading.SetActive(true);
             SceneManager.LoadScene("NewStageDesignLevelJason");
         }
         

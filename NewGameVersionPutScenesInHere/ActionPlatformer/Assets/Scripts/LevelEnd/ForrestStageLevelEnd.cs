@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ForrestStageLevelEnd : MonoBehaviour
 {
+
+    public GameObject Gift;
+    public GameObject GiftText;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +22,20 @@ public class ForrestStageLevelEnd : MonoBehaviour
 
       void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Loader")
+        //if (collision.gameObject.tag == "Loader")
+        //{
+            //SceneManager.LoadScene("BossGrrJasonTesting");
+       // }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.name == "Gift")
         {
-            SceneManager.LoadScene("BossGrrJasonTesting");
+
+            Gift.SetActive(true);
+            GiftText.SetActive(true);
+            Destroy(other.gameObject);
         }
     }
 }

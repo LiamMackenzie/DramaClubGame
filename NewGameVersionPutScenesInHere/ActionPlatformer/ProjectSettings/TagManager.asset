@@ -25,6 +25,7 @@ TagManager:
   - GrrJumpBig
   - GrrJump
   - Painting
+  - Trigger1
   layers:
   - Default
   - TransparentFX

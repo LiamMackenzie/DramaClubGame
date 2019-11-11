@@ -26,6 +26,7 @@ TagManager:
   - GrrJump
   - Painting
   - Trigger1
+  - Walls
   layers:
   - Default
   - TransparentFX

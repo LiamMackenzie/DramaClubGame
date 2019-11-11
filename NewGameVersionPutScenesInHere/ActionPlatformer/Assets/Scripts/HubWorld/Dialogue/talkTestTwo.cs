@@ -16,11 +16,13 @@ public class talkTestTwo : MonoBehaviour
     public GameObject StageBox;
     public GameObject BunnyBox;
     public GameObject MicroBox;
-
+    public AudioSource walls;
+    
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("The game has started friend");
+        walls= GetComponent<AudioSource>();
     }
 
     void Update()
@@ -140,6 +142,11 @@ public class talkTestTwo : MonoBehaviour
                     MicroBox.SetActive(true);
                     Dialogue = true;
                 }
+            }
+
+            else if(collision.gameObject.tag == "Walls")
+            {
+                walls.Play();
             }
             
         }

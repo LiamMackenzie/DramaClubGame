@@ -16,7 +16,9 @@ public class talkTestTwo : MonoBehaviour
     public GameObject StageBox;
     public GameObject BunnyBox;
     public GameObject MicroBox;
+    public GameObject CarolineBox;
     public AudioSource walls;
+   
     
     // Start is called before the first frame update
     void Start()
@@ -148,6 +150,15 @@ public class talkTestTwo : MonoBehaviour
             {
                 walls.Play();
             }
+
+            else if(collision.gameObject.name == "Caroline")
+            {
+                if(Dialogue == false)
+                {
+                    CarolineBox.SetActive(true);
+                    Dialogue = true;
+                }
+            }
             
         }
 
@@ -233,6 +244,15 @@ public class talkTestTwo : MonoBehaviour
             if(Dialogue = true)
             {
                 MicroBox.SetActive(false);
+                Dialogue = false;
+            }
+        }
+
+        else if(collision.gameObject.name == "Caroline")
+        {
+            if(Dialogue = true)
+            {
+                CarolineBox.SetActive(false);
                 Dialogue = false;
             }
         }

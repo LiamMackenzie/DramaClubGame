@@ -58,10 +58,10 @@ public class SwitchCharacter : MonoBehaviour
             pControl = GetComponentInChildren<PControl>();
             deathCounter++;
         }
-
+        
         if(deathCounter >= 3)
         {
-            SceneManager.LoadScene("BossDD");
+            SceneManager.LoadScene("GameOver");
         }
     }
 

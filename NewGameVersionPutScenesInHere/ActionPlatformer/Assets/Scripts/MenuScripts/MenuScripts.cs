@@ -28,7 +28,7 @@ public class MenuScripts : MonoBehaviour
 
     public void hubLoad()
     {
-        SceneManager.LoadScene("MainHub");
+        SceneManager.LoadScene("MainHubJasonUpdate");
     }
 
     public void quitting()
@@ -42,6 +42,11 @@ public class MenuScripts : MonoBehaviour
         pauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
 		GamePause = false;
+    }
+
+    public void restart()
+    {
+        SceneManager.LoadScene("NewStageDesignLevelJason");
     }
     
 }

@@ -188,6 +188,11 @@ public class PControl : MonoBehaviour {
             SceneManager.LoadScene("BossDD");
         }
 
+		if(col.gameObject.tag == "EndScreen")
+		{
+			SceneManager.LoadScene("EndScreen");
+		}
+
     }
 
 	void OnTriggerEnter2D(Collider2D other)

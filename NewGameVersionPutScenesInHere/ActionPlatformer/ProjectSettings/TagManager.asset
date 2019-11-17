@@ -27,6 +27,7 @@ TagManager:
   - Painting
   - Trigger1
   - Walls
+  - EndScreen
   layers:
   - Default
   - TransparentFX

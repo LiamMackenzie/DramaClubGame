@@ -33146,6 +33146,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.3390002}
+--- !u!114 &639625004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3826668885581670483, guid: 62a355806ea632a46b82f81fe53c6666,
+    type: 3}
+  m_PrefabInstance: {fileID: 1223525643360347190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ea03d3b35858740bd36183f102d161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &688813770 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8134264534473228935, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
@@ -34389,5 +34401,17 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2027152822}
+    - target: {fileID: 784477730, guid: 62a355806ea632a46b82f81fe53c6666, type: 3}
+      propertyPath: grrControl
+      value: 
+      objectReference: {fileID: 639625004}
+    - target: {fileID: 784477730, guid: 62a355806ea632a46b82f81fe53c6666, type: 3}
+      propertyPath: currentHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 784477730, guid: 62a355806ea632a46b82f81fe53c6666, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62a355806ea632a46b82f81fe53c6666, type: 3}

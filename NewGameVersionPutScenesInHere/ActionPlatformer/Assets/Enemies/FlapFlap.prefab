@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 8656624290556369271}
   - component: {fileID: 8656624290556369270}
   - component: {fileID: 8656624290556369273}
-  - component: {fileID: 8656624290556369265}
   - component: {fileID: 1250540032580759250}
   - component: {fileID: 570540657685761900}
   - component: {fileID: 3113216889943919905}
+  - component: {fileID: 1326361175784176753}
   m_Layer: 12
   m_Name: FlapFlap
   m_TagString: Enemy
@@ -210,25 +210,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8656624290556369265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8656624290556369264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
-    type: 3}
-  takedmgWasCalled: 0
-  knockBack: 0
-  knockBacklength: 0
-  knockBackcount: 0
 --- !u!61 &1250540032580759250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -284,3 +265,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamgeVaule: 5
+--- !u!114 &1326361175784176753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656624290556369264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
+    type: 3}
+  takeDmg: 0
+  knockBack: 2
+  knockBacklength: 2
+  knockBackcount: 2

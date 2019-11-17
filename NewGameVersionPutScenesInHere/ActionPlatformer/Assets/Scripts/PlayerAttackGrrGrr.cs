@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerAttackGrrGrr : MonoBehaviour
 {
     public float attackRate = 1.0f;
     private float nextAttack;
@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 //enemiesToDamage[i].GetComponent<EnemyTwo>().TakeDamage(damage);
-                enemiesToDamage[i].GetComponent<EnemyTwo>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
             }
 
 

@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1186665871033490680}
   - component: {fileID: 1186665871033490683}
-  - component: {fileID: 1186665871033490682}
   - component: {fileID: 1186665871033490685}
   - component: {fileID: 1186665871033490681}
-  - component: {fileID: 1186665871033490630}
+  - component: {fileID: 5896553253933821381}
   m_Layer: 12
   m_Name: Slime
   m_TagString: Enemy
@@ -83,19 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1186665871033490682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186665871033490684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f6bf30f9bdc5c4688d269399e3aea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
 --- !u!61 &1186665871033490685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +129,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1186665871033490630
+--- !u!114 &5896553253933821381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,12 +138,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186665871033490684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  knockBack: 5
-  knockBacklength: 5
-  knockBackcount: 2
+  takeDmg: 0
+  knockBack: 1
+  knockBacklength: 1
+  knockBackcount: 1

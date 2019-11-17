@@ -11,7 +11,7 @@ public class GrrProjectile : MonoBehaviour
 
 
 
-    float gr_ProjSpeed = 20f;
+    public float gr_ProjSpeed = 20f;
     public float gr_ProjDamage = 5f;
     public float gr_ProjDestroyAfterTime = 3f;
 

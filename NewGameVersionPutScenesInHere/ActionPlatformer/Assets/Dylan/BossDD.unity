@@ -33073,7 +33073,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1318057518}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1318057521}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c8e03b6f98e06c4dbb14d6457e4886b, type: 3}
@@ -33766,9 +33766,111 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 4894526906450230823}
+    - target: {fileID: 4635532107458497846, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673432109830735993, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565913527202279207, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1.57
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4878692027826293413, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1, type: 3}
+--- !u!4 &1318057519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4878692029634072384, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1318057518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1318057520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7454955466017963583, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1318057518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1318057521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8134264534473228928, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1318057518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1318057522 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4878692029302195768, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1318057518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1318057523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7721180019495183838, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1318057518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1318057524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318057520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae36cab7e2b894a429750aa69cf4b034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRate: 1
+  attackPosition: {fileID: 1318057519}
+  attackRange: 1.8
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  damage: 5
+--- !u!114 &1318057525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318057521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae36cab7e2b894a429750aa69cf4b034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRate: 1
+  attackPosition: {fileID: 993810857}
+  attackRange: 1.66
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  damage: 5
+--- !u!114 &1318057526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318057523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae36cab7e2b894a429750aa69cf4b034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRate: 1
+  attackPosition: {fileID: 1318057522}
+  attackRange: 1.9
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  damage: 5
 --- !u!1 &1361563376
 GameObject:
   m_ObjectHideFlags: 0
@@ -35034,7 +35136,7 @@ PrefabInstance:
       objectReference: {fileID: 639625004}
     - target: {fileID: 784477730, guid: 62a355806ea632a46b82f81fe53c6666, type: 3}
       propertyPath: currentHealth
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 784477730, guid: 62a355806ea632a46b82f81fe53c6666, type: 3}
       propertyPath: maxHealth

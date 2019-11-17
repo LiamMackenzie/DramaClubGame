@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 142132405369674293}
   - component: {fileID: 2827400362784160613}
   - component: {fileID: 2827400362784160614}
-  - component: {fileID: 2827400362784160612}
+  - component: {fileID: 924594045822550212}
   m_Layer: 12
   m_Name: BANDI
   m_TagString: Enemy
@@ -168,7 +168,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2827400362784160612
+--- !u!114 &924594045822550212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,13 +177,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2827400362784160602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
   takeDmg: 0
-  knockBack: 0.2
-  knockBacklength: 1
-  knockBackcount: 0
+  knockBack: 2
+  knockBacklength: 2
+  knockBackcount: 2

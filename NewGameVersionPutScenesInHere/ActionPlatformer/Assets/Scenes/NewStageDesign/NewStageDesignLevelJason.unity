@@ -122,9 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1452743}
   - component: {fileID: 1452742}
-  - component: {fileID: 1452741}
   - component: {fileID: 1452740}
   - component: {fileID: 1452744}
+  - component: {fileID: 1452741}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (1)
   m_TagString: Breakable Wall
@@ -167,20 +167,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1452739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &1452742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -671,12 +667,12 @@ PrefabInstance:
     - target: {fileID: 4878692028455035374, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.15
+      value: -6.47
       objectReference: {fileID: 0}
     - target: {fileID: 4878692028455035374, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.48
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4878692028455035374, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
@@ -753,6 +749,46 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 7915727668176089977}
+    - target: {fileID: 7454955466017963579, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454955466017963579, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454955466017963579, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134264534473228931, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134264534473228931, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721180019495183837, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721180019495183837, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721180019495183837, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7454955466017963576, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
       propertyPath: m_Mass
@@ -797,6 +833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: attackRate
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635532107458497846, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1.71
       objectReference: {fileID: 0}
     - target: {fileID: 4878692028455035373, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
@@ -848,6 +889,11 @@ PrefabInstance:
       propertyPath: attackRate
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4673432109830735993, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1.85
+      objectReference: {fileID: 0}
     - target: {fileID: 8134264534473228934, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
       propertyPath: m_Mass
@@ -887,6 +933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: attackRate
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565913527202279207, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 4878692028117591321, guid: fcce6f1f4b9c0904ca7eb1fbd274fef1,
         type: 3}
@@ -985,6 +1036,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1001 &84165955
@@ -1059,6 +1120,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1001 &86982125
@@ -1132,6 +1203,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
@@ -1657,6 +1738,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: target
@@ -1934,6 +2025,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -1944,7 +2045,8 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &234290642 stripped
 GameObject:
@@ -2243,6 +2345,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: target
@@ -2417,6 +2529,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1001 &341652882
@@ -2536,6 +2658,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -2546,7 +2678,8 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &346384388
 GameObject:
@@ -2918,6 +3051,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393552291}
   m_CullTransparentMesh: 0
+--- !u!1 &393944130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 393944131}
+  - component: {fileID: 393944132}
+  m_Layer: 0
+  m_Name: Forest_BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &393944131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393944130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.7, y: 5.6, z: 12.2}
+  m_LocalScale: {x: 7.1063986, y: 7.1063986, z: 7.1063986}
+  m_Children: []
+  m_Father: {fileID: 1115032827}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &393944132
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393944130}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6ee3f584efcdf2643997b2fc4fc6ab9e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.73, y: 5.73}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &456948848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1186665871033490680, guid: 03e80622a64390d4aba01f96839b532a,
@@ -2934,9 +3146,9 @@ GameObject:
   m_Component:
   - component: {fileID: 476376780}
   - component: {fileID: 476376779}
-  - component: {fileID: 476376778}
   - component: {fileID: 476376777}
   - component: {fileID: 476376781}
+  - component: {fileID: 476376778}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (2)
   m_TagString: Breakable Wall
@@ -2979,20 +3191,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 476376776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &476376779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3393,6 +3601,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1001 &501922825
@@ -3467,6 +3685,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1 &502285487
@@ -3479,9 +3707,9 @@ GameObject:
   m_Component:
   - component: {fileID: 502285488}
   - component: {fileID: 502285492}
-  - component: {fileID: 502285491}
   - component: {fileID: 502285490}
   - component: {fileID: 502285489}
+  - component: {fileID: 502285491}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (8)
   m_TagString: Breakable Wall
@@ -3559,20 +3787,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 502285487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &502285492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123741,9 +123965,9 @@ GameObject:
   m_Component:
   - component: {fileID: 547809412}
   - component: {fileID: 547809416}
-  - component: {fileID: 547809415}
   - component: {fileID: 547809414}
   - component: {fileID: 547809413}
+  - component: {fileID: 547809415}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (4)
   m_TagString: Breakable Wall
@@ -123821,20 +124045,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 547809411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &547809416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -124496,6 +124716,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1 &668823866
@@ -124612,6 +124842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692843165}
   - component: {fileID: 692843164}
+  - component: {fileID: 692843166}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -124671,6 +124902,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &692843166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692843163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4eeee0de20bf847b48909c15ebdb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &701625732
 GameObject:
   m_ObjectHideFlags: 0
@@ -125087,6 +125330,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: target
@@ -125297,9 +125550,9 @@ GameObject:
   m_Component:
   - component: {fileID: 841426073}
   - component: {fileID: 841426072}
-  - component: {fileID: 841426071}
   - component: {fileID: 841426074}
   - component: {fileID: 841426075}
+  - component: {fileID: 841426071}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14
   m_TagString: Breakable Wall
@@ -125316,20 +125569,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 841426070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &841426072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125449,9 +125698,9 @@ GameObject:
   m_Component:
   - component: {fileID: 846549659}
   - component: {fileID: 846549663}
-  - component: {fileID: 846549662}
   - component: {fileID: 846549661}
   - component: {fileID: 846549660}
+  - component: {fileID: 846549662}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (7)
   m_TagString: Breakable Wall
@@ -125529,20 +125778,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 846549658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &846549663
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126060,6 +126305,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1 &900047263 stripped
@@ -126536,6 +126791,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1 &1038657287
@@ -126665,6 +126930,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: target
@@ -126772,6 +127047,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1115032827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 771904541599427961, guid: f89886b8654ea38419a4fd25fc9fed95,
+    type: 3}
+  m_PrefabInstance: {fileID: 545687036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1118253330
 GameObject:
   m_ObjectHideFlags: 0
@@ -127021,6 +127302,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -127031,7 +127322,8 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &1142187884
 GameObject:
@@ -127617,6 +127909,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: target
@@ -127716,6 +128018,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
@@ -128411,6 +128723,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
       propertyPath: target
@@ -128823,6 +129145,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -128838,7 +129170,8 @@ PrefabInstance:
       propertyPath: enemyDamgeVaule
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &1499522084 stripped
 GameObject:
@@ -128979,6 +129312,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -128994,7 +129337,8 @@ PrefabInstance:
       propertyPath: enemyDamgeVaule
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &1530847094 stripped
 GameObject:
@@ -129091,9 +129435,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1605082604}
   - component: {fileID: 1605082608}
-  - component: {fileID: 1605082607}
   - component: {fileID: 1605082606}
   - component: {fileID: 1605082605}
+  - component: {fileID: 1605082607}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (6)
   m_TagString: Breakable Wall
@@ -129171,20 +129515,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605082603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &1605082608
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129704,6 +130044,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -129719,7 +130069,8 @@ PrefabInstance:
       propertyPath: enemyDamgeVaule
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &1667309376
 GameObject:
@@ -129920,6 +130271,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
@@ -130173,6 +130534,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -130188,7 +130559,8 @@ PrefabInstance:
       propertyPath: enemyDamgeVaule
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &1734314789
 GameObject:
@@ -130364,9 +130736,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1755889389}
   - component: {fileID: 1755889393}
-  - component: {fileID: 1755889392}
   - component: {fileID: 1755889391}
   - component: {fileID: 1755889390}
+  - component: {fileID: 1755889392}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (5)
   m_TagString: Breakable Wall
@@ -130444,20 +130816,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755889388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &1755889393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -130578,6 +130946,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1001 &1764905904
@@ -130652,6 +131030,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1001 &1782015956
@@ -130725,6 +131113,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
@@ -131084,6 +131482,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -131099,7 +131507,8 @@ PrefabInstance:
       propertyPath: enemyDamgeVaule
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1001 &1915433067
 PrefabInstance:
@@ -131172,6 +131581,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
@@ -131291,6 +131710,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}
@@ -131453,9 +131882,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1944361771}
   - component: {fileID: 1944361775}
-  - component: {fileID: 1944361774}
   - component: {fileID: 1944361773}
   - component: {fileID: 1944361772}
+  - component: {fileID: 1944361774}
   m_Layer: 12
   m_Name: Overworld-Sprites-1_14 (3)
   m_TagString: Breakable Wall
@@ -131533,20 +131962,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1944361770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ea0f364800c94449cddd5ecc9ce1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4beafd1628b7b2b4990df73701afab4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  health: 5
   deathEffect: {fileID: 4709920674924724210, guid: 2f5fae7a239c0a641bdbb8b69f671572,
     type: 3}
-  grrControl: {fileID: 0}
   takeDmg: 0
   knockBack: 0
   knockBacklength: 0
   knockBackcount: 0
-  maxHealth: 0
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!212 &1944361775
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -131820,6 +132245,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -131835,7 +132270,8 @@ PrefabInstance:
       propertyPath: enemyDamgeVaule
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &1993736029
 GameObject:
@@ -132009,6 +132445,16 @@ PrefabInstance:
       propertyPath: knockBackcount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: currentHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8656624290556369273, guid: 7a71d13b27437b34ba6605c571e7a73b,
         type: 3}
       propertyPath: m_GravityScale
@@ -132019,7 +132465,8 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8656624290556369265, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a71d13b27437b34ba6605c571e7a73b, type: 3}
 --- !u!1 &2041016746
 GameObject:
@@ -132348,6 +132795,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!1 &2080363077
@@ -132639,6 +133096,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
 --- !u!4 &2115978979 stripped
@@ -132922,6 +133389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186665871033490630, guid: 03e80622a64390d4aba01f96839b532a,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e80622a64390d4aba01f96839b532a, type: 3}
@@ -133209,6 +133686,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827400362784160612, guid: 25445f569a471c94ab7b5f9176e0e2fe,
+        type: 3}
+      propertyPath: maxHealth
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2827400362784160601, guid: 25445f569a471c94ab7b5f9176e0e2fe,
         type: 3}

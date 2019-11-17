@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour {
 	
 	public GameObject deathEffect;
 
+	public GrrBehaviour grrControl;
+
 	private Rigidbody2D rb;
     public bool takeDmg = false;
 	public float knockBack;
@@ -36,7 +38,8 @@ public class Enemy : MonoBehaviour {
 	    currentHealth -= damage;
 	    if (currentHealth <= 0)
 	    {
-		    KillMe();
+		    
+			KillMe();
 	    }
 	}
 
@@ -60,6 +63,8 @@ public class Enemy : MonoBehaviour {
             
         if (currentHealth <= 0)
 		{
+			takeDmg = true;
+			grrControl.Die();
 			KillMe();
 		}
 
@@ -84,7 +89,7 @@ public class Enemy : MonoBehaviour {
 		
     }
 
-	void KillMe()
+	public void KillMe()
 	{
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);

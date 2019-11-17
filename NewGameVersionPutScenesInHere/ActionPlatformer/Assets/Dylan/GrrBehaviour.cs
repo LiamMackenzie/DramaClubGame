@@ -143,5 +143,19 @@ public class GrrBehaviour : MonoBehaviour
         return(dir);
     }
 
+    public void Die()
+    {
+        animator.SetBool("Die", true);
+        speed = 0;
+        isHit = true;
+        Invoke("KillMe", 2.5f);
+    }
+
+    void KillMe()
+    {
+        myEnemyScript.KillMe();
+    }
+
+
 
 }

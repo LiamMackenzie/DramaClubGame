@@ -177,6 +177,7 @@ public class PControl : MonoBehaviour {
 				knockFromright = false;
 			}	
         }
+		
 		if(col.gameObject.tag == "Ground")
 		{
 			isJumping = false;
@@ -188,6 +189,25 @@ public class PControl : MonoBehaviour {
         }
 
     }
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+	if(other.gameObject.tag == "GrrGrr")
+		{
+			currentHealth -= other.gameObject.GetComponent<GrrProjectile>().gr_ProjDamage;
+			healthBar.value = CalculateHealth();
+		}
+		if(other.transform.position.x < transform.position.x)
+			{
+				rb.AddForce(new Vector2(knockBack, 0) * 2);
+				knockFromright = true;
+			}
+			else
+			{
+				rb.AddForce(new Vector2(-knockBack, 0) * 2);
+				knockFromright = false;
+			}	
+	}
 	
 
 	

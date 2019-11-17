@@ -12,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
     [HideInInspector]
     public LayerMask enemyMask;
     public int damage;
+
+    
     
 
     private Animator animator;
@@ -31,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.K) && Time.time > nextAttack) //nextAttack = Time.time + attackRate;
         {
-                //GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>().Play();
             animator.SetBool("isAttacking", true);
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, enemyMask);
             for (int i = 0; i < enemiesToDamage.Length; i++)

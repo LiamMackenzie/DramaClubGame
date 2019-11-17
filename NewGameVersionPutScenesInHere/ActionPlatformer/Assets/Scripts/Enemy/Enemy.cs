@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
-	public int health;
+	public float currentHealth;
+	
 	public GameObject deathEffect;
 
 	private Rigidbody2D rb;
@@ -13,31 +15,50 @@ public class Enemy : MonoBehaviour {
 	public float knockBacklength;
 	public float knockBackcount;
 	private bool knockFromright;
+
+	
+    public float maxHealth;
+    public Slider healthBar;
+	public bool isDead = false;
+
     
 	
 	void Start ()
 	{
 	    rb = GetComponent<Rigidbody2D>();
+		currentHealth = maxHealth;
+        healthBar.value = CalculateHealth();
     }
 
 
     public void DamageDealt (int damage)
 	{
-	    health -= damage;
-	    if (health <= 0)
+	    currentHealth -= damage;
+	    if (currentHealth <= 0)
 	    {
 		    KillMe();
 	    }
+	}
+
+	/// <summary>
+	/// Update is called every frame, if the MonoBehaviour is enabled.
+	/// </summary>
+	void Update()
+	{
+		//healthBar.value = CalculateHealth();
 	}
 
 	public void TakeDamage(int damage)
 	{
 		
 		takeDmg = true;
-		health -= damage;
+		Debug.Log("enemy Got Hit");
+		currentHealth -= damage;
+
+		healthBar.value = CalculateHealth();
 
             
-        if (health <= 0)
+        if (currentHealth <= 0)
 		{
 			KillMe();
 		}
@@ -53,7 +74,14 @@ public class Enemy : MonoBehaviour {
 		{
 			rb.AddForce(new Vector2(-knockBack, 0) * 2);             
         }
+		Invoke("ResetHitAnim", 3);
         
+    }
+
+	float CalculateHealth()
+    {
+        return currentHealth / maxHealth;
+		
     }
 
 	void KillMe()

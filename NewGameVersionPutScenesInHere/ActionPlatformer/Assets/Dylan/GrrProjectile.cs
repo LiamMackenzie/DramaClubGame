@@ -11,23 +11,23 @@ public class GrrProjectile : MonoBehaviour
 
 
 
-    public float gr_ProjSpeed = 5f;
+    float gr_ProjSpeed = 20f;
     public float gr_ProjDamage = 5f;
     public float gr_ProjDestroyAfterTime = 3f;
 
-    bool m_Hit;
+    //bool m_Hit;
 
     
     
     void Start()
     {
-        m_Hit = false;
+        //m_Hit = false;
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         target = GameObject.FindObjectOfType<PControl>();
         moveDirection = (target.transform.position - transform.position).normalized * gr_ProjSpeed;
         rb2d.velocity = new Vector2 (moveDirection.x, moveDirection.y);
-        m_Hit = false;
+        //m_Hit = false;
         Destroy (gameObject, gr_ProjDestroyAfterTime);
     }
 
@@ -42,7 +42,7 @@ public class GrrProjectile : MonoBehaviour
         {
             
             anim.SetBool("isHit", true);
-            Debug.Log("truehit");
+            //Debug.Log("truehit");
             Destroy(gameObject, 0.25f);
             
         }
